@@ -58,7 +58,10 @@ namespace VkPostDownloader
                     intent.SetFlags(ActivityFlags.NewTask | ActivityFlags.ClearTop);
                     Application.Context.StartActivity(intent);
                 }
+              
             }
         }
+
+      
     }
 }

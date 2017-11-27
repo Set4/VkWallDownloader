@@ -15,6 +15,8 @@ using Android.Support.V7.Widget;
 using Android.Support.V7.App;
 using static Android.Support.V4.Widget.SwipeRefreshLayout;
 using System.Threading.Tasks;
+using FFImageLoading;
+using FFImageLoading.Views;
 
 namespace VkPostDownloader
 {
@@ -27,6 +29,9 @@ namespace VkPostDownloader
         RecyclerView recyclerView;
         [InjectView(Resource.Id.swpRefresh_updateWalls)]
         Android.Support.V4.Widget.SwipeRefreshLayout swipeRefreshLayout;
+     
+        [InjectView(Resource.Id.imgView_imageItem)]
+        public ImageViewAsync Image;
 
         WallsItemAdapter adapter;
 
@@ -40,22 +45,19 @@ namespace VkPostDownloader
 
         public override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
-            Cheeseknife.Reset(this);
-
-
-            swipeRefreshLayout.SetOnRefreshListener(this);
-            // делаем повеселее
-            // swipeRefreshLayout.setColorScheme(Resource.Color.b.color.blue, R.color.green, R.color.yellow, R.color.red);
-
             Bundle bundle = this.Arguments;
             currentGroupItemKey = bundle.GetInt("key");
+
+            base.OnCreate(savedInstanceState);
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             var view = inflater.Inflate(Resource.Layout.item_layout, null);
             Cheeseknife.Inject(this, view);
+
+
+            swipeRefreshLayout.SetOnRefreshListener(this);
 
             ((AppCompatActivity)this.Activity).SetSupportActionBar(toolbar);
             ((AppCompatActivity)this.Activity).SupportActionBar.SetDisplayHomeAsUpEnabled(true);
@@ -83,7 +85,21 @@ namespace VkPostDownloader
         public async override void OnActivityCreated(Bundle savedInstanceState)
         {
             base.OnActivityCreated(savedInstanceState);
-            await AddSearchResult(countLoadItems, page * countLoadItems);
+
+            var item = await GetGroupItem(currentGroupItemKey);
+            if (item != null)
+            {
+               
+                ((AppCompatActivity)this.Activity).Title = item.Name;
+            
+                await ImageService.Instance.LoadFile(item.PhotoPath)
+             .Retry(2, 200)
+             .LoadingPlaceholder("ic_done", FFImageLoading.Work.ImageSource.CompiledResource)
+             .ErrorPlaceholder("ic_action", FFImageLoading.Work.ImageSource.CompiledResource)
+             .Error(e => System.Diagnostics.Debug.WriteLine(e.Message)) //TODO: log                                 
+             .IntoAsync(Image);
+            }
+            await GetPOsts(countLoadItems, page * countLoadItems);
         }
 
         public override void OnDestroyView()
@@ -125,10 +141,10 @@ namespace VkPostDownloader
 
         private async void OnScrollListener_LoadMoreEvent(object sender, EventArgs e)
         {
-            await AddSearchResult(countLoadItems, page * countLoadItems);
+            await GetPOsts(countLoadItems, page * countLoadItems);
         }
 
-        private async Task AddSearchResult(int count, int offset)
+        private async Task GetPOsts(int count, int offset)
         {
             try
             {
@@ -145,7 +161,19 @@ namespace VkPostDownloader
             }
             return;
         }
-
+        private async Task<GroupItem> GetGroupItem(int key)
+        {
+            GroupItem item = null;
+            try
+            {
+                item= await DbHelper.GetItem(key, ((MainActivity)this.Activity).Connection);
+            }
+            catch (Exception ex)
+            {
+                 //TODO:Log
+            }
+            return item;
+        }
 
 
         public async void OnRefresh()
@@ -157,7 +185,7 @@ namespace VkPostDownloader
             // ждем 3 секунды и прячем прогресс
             page = 0;
             adapter.Clear();
-            await AddSearchResult(countLoadItems, page * countLoadItems);
+            await GetPOsts(countLoadItems, page * countLoadItems);
             swipeRefreshLayout.Refreshing = false;
         }
     }

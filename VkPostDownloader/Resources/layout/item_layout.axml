@@ -24,14 +24,12 @@
         app:expandedTitleMarginStart="48dp"
         app:expandedTitleMarginEnd="64dp">
 
-      <ImageView
-          android:id="@+id/main.backdrop"
-          android:layout_width="match_parent"
+        <FFImageLoading.Views.ImageViewAsync
+            android:id="@+id/imgView_imageItem"
+            android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:scaleType="centerCrop"
-          android:fitsSystemWindows="true"
-          android:src="@drawable/ic_action"
-          app:layout_collapseMode="parallax"/>
+          android:fitsSystemWindows="true" />    
 
       <android.support.v7.widget.Toolbar
           android:id="@+id/toolbar_item"

@@ -2374,26 +2374,26 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f020080
-			public const int avd_hide_password_1 = 2130837632;
-			
 			// aapt resource value: 0x7f020081
-			public const int avd_hide_password_2 = 2130837633;
+			public const int avd_hide_password_1 = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int avd_hide_password_3 = 2130837634;
+			public const int avd_hide_password_2 = 2130837634;
+			
+			// aapt resource value: 0x7f020083
+			public const int avd_hide_password_3 = 2130837635;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f020083
-			public const int avd_show_password_1 = 2130837635;
-			
 			// aapt resource value: 0x7f020084
-			public const int avd_show_password_2 = 2130837636;
+			public const int avd_show_password_1 = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int avd_show_password_3 = 2130837637;
+			public const int avd_show_password_2 = 2130837637;
+			
+			// aapt resource value: 0x7f020086
+			public const int avd_show_password_3 = 2130837638;
 			
 			// aapt resource value: 0x7f020055
 			public const int design_bottom_navigation_item_background = 2130837589;
@@ -2453,76 +2453,79 @@ namespace VkPostDownloader
 			public const int ic_headset = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int ic_menu = 2130837608;
+			public const int ic_keyboard_arrow_down_black_36dp = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int ic_menu_refresh = 2130837609;
+			public const int ic_menu = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int ic_search_black_36dp = 2130837610;
+			public const int ic_menu_refresh = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int ic_search_white_24dp = 2130837611;
+			public const int ic_search_black_36dp = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int navigation_empty_icon = 2130837612;
+			public const int ic_search_white_24dp = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int notification_action_background = 2130837613;
+			public const int navigation_empty_icon = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int notification_bg = 2130837614;
+			public const int notification_action_background = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int notification_bg_low = 2130837615;
+			public const int notification_bg = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int notification_bg_low_normal = 2130837616;
+			public const int notification_bg_low = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int notification_bg_low_pressed = 2130837617;
+			public const int notification_bg_low_normal = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int notification_bg_normal = 2130837618;
+			public const int notification_bg_low_pressed = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int notification_bg_normal_pressed = 2130837619;
+			public const int notification_bg_normal = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int notification_icon_background = 2130837620;
-			
-			// aapt resource value: 0x7f02007e
-			public const int notification_template_icon_bg = 2130837630;
-			
-			// aapt resource value: 0x7f02007f
-			public const int notification_template_icon_low_bg = 2130837631;
+			public const int notification_bg_normal_pressed = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int notification_tile_bg = 2130837621;
+			public const int notification_icon_background = 2130837621;
+			
+			// aapt resource value: 0x7f02007f
+			public const int notification_template_icon_bg = 2130837631;
+			
+			// aapt resource value: 0x7f020080
+			public const int notification_template_icon_low_bg = 2130837632;
 			
 			// aapt resource value: 0x7f020076
-			public const int notify_panel_notification_icon_bg = 2130837622;
+			public const int notification_tile_bg = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int splash_logo = 2130837623;
+			public const int notify_panel_notification_icon_bg = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int splash_screen = 2130837624;
+			public const int splash_logo = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int tooltip_frame_dark = 2130837625;
+			public const int splash_screen = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int tooltip_frame_light = 2130837626;
+			public const int tooltip_frame_dark = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int vk_clear_shape = 2130837627;
+			public const int tooltip_frame_light = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int vk_gray_transparent_shape = 2130837628;
+			public const int vk_clear_shape = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int vk_share_send_button_background = 2130837629;
+			public const int vk_gray_transparent_shape = 2130837629;
+			
+			// aapt resource value: 0x7f02007e
+			public const int vk_share_send_button_background = 2130837630;
 			
 			static Drawable()
 			{
@@ -2558,8 +2561,8 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f0700ab
 			public const int action0 = 2131165355;
 			
-			// aapt resource value: 0x7f0700df
-			public const int action_add = 2131165407;
+			// aapt resource value: 0x7f0700de
+			public const int action_add = 2131165406;
 			
 			// aapt resource value: 0x7f07007d
 			public const int action_bar = 2131165309;
@@ -2609,14 +2612,14 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f07005d
 			public const int action_mode_close_button = 2131165277;
 			
-			// aapt resource value: 0x7f0700de
-			public const int action_search = 2131165406;
+			// aapt resource value: 0x7f0700dd
+			public const int action_search = 2131165405;
+			
+			// aapt resource value: 0x7f0700e5
+			public const int action_searchNet = 2131165413;
 			
 			// aapt resource value: 0x7f0700e4
-			public const int action_searchNet = 2131165412;
-			
-			// aapt resource value: 0x7f0700e3
-			public const int action_settingsSearch = 2131165411;
+			public const int action_settingsSearch = 2131165412;
 			
 			// aapt resource value: 0x7f0700aa
 			public const int action_text = 2131165354;
@@ -2648,8 +2651,8 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f070057
 			public const int async = 2131165271;
 			
-			// aapt resource value: 0x7f0700d8
-			public const int attachmentLinkLayout = 2131165400;
+			// aapt resource value: 0x7f0700d7
+			public const int attachmentLinkLayout = 2131165399;
 			
 			// aapt resource value: 0x7f070045
 			public const int auto = 2131165253;
@@ -2669,8 +2672,8 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f0700a5
 			public const int btn_logout = 2131165349;
 			
-			// aapt resource value: 0x7f0700c5
-			public const int btn_popupMenu = 2131165381;
+			// aapt resource value: 0x7f0700c4
+			public const int btn_popupMenu = 2131165380;
 			
 			// aapt resource value: 0x7f070064
 			public const int buttonPanel = 2131165284;
@@ -2678,11 +2681,11 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f0700ac
 			public const int cancel_action = 2131165356;
 			
-			// aapt resource value: 0x7f0700cd
-			public const int captchaAnswer = 2131165389;
+			// aapt resource value: 0x7f0700cc
+			public const int captchaAnswer = 2131165388;
 			
-			// aapt resource value: 0x7f0700ca
-			public const int captcha_container = 2131165386;
+			// aapt resource value: 0x7f0700c9
+			public const int captcha_container = 2131165385;
 			
 			// aapt resource value: 0x7f070046
 			public const int center = 2131165254;
@@ -2720,8 +2723,8 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f07008f
 			public const int coordinator = 2131165327;
 			
-			// aapt resource value: 0x7f0700cf
-			public const int copyUrl = 2131165391;
+			// aapt resource value: 0x7f0700ce
+			public const int copyUrl = 2131165390;
 			
 			// aapt resource value: 0x7f07006e
 			public const int custom = 2131165294;
@@ -2822,23 +2825,26 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f070060
 			public const int image = 2131165280;
 			
-			// aapt resource value: 0x7f0700cc
-			public const int imageView = 2131165388;
-			
-			// aapt resource value: 0x7f0700d7
-			public const int imagesContainer = 2131165399;
+			// aapt resource value: 0x7f0700cb
+			public const int imageView = 2131165387;
 			
 			// aapt resource value: 0x7f0700d6
-			public const int imagesScrollView = 2131165398;
+			public const int imagesContainer = 2131165398;
 			
-			// aapt resource value: 0x7f0700c8
-			public const int imgBtn_addToDownload = 2131165384;
+			// aapt resource value: 0x7f0700d5
+			public const int imagesScrollView = 2131165397;
 			
-			// aapt resource value: 0x7f0700c6
-			public const int imgView_imageFoundGroup = 2131165382;
+			// aapt resource value: 0x7f0700c7
+			public const int imgBtn_addToDownload = 2131165383;
 			
-			// aapt resource value: 0x7f0700c2
-			public const int imgView_imageGroup = 2131165378;
+			// aapt resource value: 0x7f0700c5
+			public const int imgView_imageFoundGroup = 2131165381;
+			
+			// aapt resource value: 0x7f0700c1
+			public const int imgView_imageGroup = 2131165377;
+			
+			// aapt resource value: 0x7f0700a0
+			public const int imgView_imageItem = 2131165344;
 			
 			// aapt resource value: 0x7f0700b5
 			public const int info = 2131165365;
@@ -2846,8 +2852,8 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f07005a
 			public const int italic = 2131165274;
 			
-			// aapt resource value: 0x7f0700c1
-			public const int item_content = 2131165377;
+			// aapt resource value: 0x7f0700c0
+			public const int item_content = 2131165376;
 			
 			// aapt resource value: 0x7f070000
 			public const int item_touch_helper_previous_elevation = 2131165184;
@@ -2858,8 +2864,8 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f07004a
 			public const int left = 2131165258;
 			
-			// aapt resource value: 0x7f0700c9
-			public const int linLayout_contanerwall = 2131165385;
+			// aapt resource value: 0x7f0700c8
+			public const int linLayout_contanerwall = 2131165384;
 			
 			// aapt resource value: 0x7f070017
 			public const int line1 = 2131165207;
@@ -2867,11 +2873,11 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f070018
 			public const int line3 = 2131165208;
 			
-			// aapt resource value: 0x7f0700da
-			public const int linkHost = 2131165402;
-			
 			// aapt resource value: 0x7f0700d9
-			public const int linkTitle = 2131165401;
+			public const int linkHost = 2131165401;
+			
+			// aapt resource value: 0x7f0700d8
+			public const int linkTitle = 2131165400;
 			
 			// aapt resource value: 0x7f07001e
 			public const int listMode = 2131165214;
@@ -2879,14 +2885,11 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f070062
 			public const int list_item = 2131165282;
 			
-			// aapt resource value: 0x7f0700a0
-			public const int main_backdrop = 2131165344;
-			
 			// aapt resource value: 0x7f0700bc
 			public const int main_content = 2131165372;
 			
-			// aapt resource value: 0x7f0700dd
-			public const int masked = 2131165405;
+			// aapt resource value: 0x7f0700dc
+			public const int masked = 2131165404;
 			
 			// aapt resource value: 0x7f0700ae
 			public const int media_actions = 2131165358;
@@ -2903,14 +2906,14 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f070028
 			public const int multiply = 2131165224;
 			
-			// aapt resource value: 0x7f0700e0
-			public const int nav_followers = 2131165408;
-			
-			// aapt resource value: 0x7f0700e2
-			public const int nav_logout = 2131165410;
+			// aapt resource value: 0x7f0700df
+			public const int nav_followers = 2131165407;
 			
 			// aapt resource value: 0x7f0700e1
-			public const int nav_search = 2131165409;
+			public const int nav_logout = 2131165409;
+			
+			// aapt resource value: 0x7f0700e0
+			public const int nav_search = 2131165408;
 			
 			// aapt resource value: 0x7f07009d
 			public const int nav_view = 2131165341;
@@ -2951,20 +2954,26 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f07004e
 			public const int pin = 2131165262;
 			
-			// aapt resource value: 0x7f0700d4
-			public const int postContentLayout = 2131165396;
+			// aapt resource value: 0x7f0700e3
+			public const int popup_item_delete = 2131165411;
 			
-			// aapt resource value: 0x7f0700db
-			public const int postSettingsLayout = 2131165403;
+			// aapt resource value: 0x7f0700e2
+			public const int popup_item_refresh = 2131165410;
+			
+			// aapt resource value: 0x7f0700d3
+			public const int postContentLayout = 2131165395;
+			
+			// aapt resource value: 0x7f0700da
+			public const int postSettingsLayout = 2131165402;
 			
 			// aapt resource value: 0x7f07009c
 			public const int prBar_groupsLoacalLoading = 2131165340;
 			
-			// aapt resource value: 0x7f0700ce
-			public const int progress = 2131165390;
+			// aapt resource value: 0x7f0700cd
+			public const int progress = 2131165389;
 			
-			// aapt resource value: 0x7f0700cb
-			public const int progressBar = 2131165387;
+			// aapt resource value: 0x7f0700ca
+			public const int progressBar = 2131165386;
 			
 			// aapt resource value: 0x7f070006
 			public const int progress_circular = 2131165190;
@@ -3053,17 +3062,17 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f07008b
 			public const int select_dialog_listview = 2131165323;
 			
-			// aapt resource value: 0x7f0700d3
-			public const int sendButton = 2131165395;
+			// aapt resource value: 0x7f0700d2
+			public const int sendButton = 2131165394;
+			
+			// aapt resource value: 0x7f0700d0
+			public const int sendButtonLayout = 2131165392;
 			
 			// aapt resource value: 0x7f0700d1
-			public const int sendButtonLayout = 2131165393;
+			public const int sendProgress = 2131165393;
 			
-			// aapt resource value: 0x7f0700d2
-			public const int sendProgress = 2131165394;
-			
-			// aapt resource value: 0x7f0700d5
-			public const int shareText = 2131165397;
+			// aapt resource value: 0x7f0700d4
+			public const int shareText = 2131165396;
 			
 			// aapt resource value: 0x7f070075
 			public const int shortcut = 2131165301;
@@ -3167,8 +3176,8 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f07003f
 			public const int top = 2131165247;
 			
-			// aapt resource value: 0x7f0700d0
-			public const int topBarLayout = 2131165392;
+			// aapt resource value: 0x7f0700cf
+			public const int topBarLayout = 2131165391;
 			
 			// aapt resource value: 0x7f07006f
 			public const int topPanel = 2131165295;
@@ -3191,17 +3200,14 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f070013
 			public const int transition_transform = 2131165203;
 			
-			// aapt resource value: 0x7f0700c4
-			public const int txtView_countGroup = 2131165380;
-			
-			// aapt resource value: 0x7f0700c7
-			public const int txtView_nameFoundGroup = 2131165383;
-			
 			// aapt resource value: 0x7f0700c3
-			public const int txtView_nameGroup = 2131165379;
+			public const int txtView_countGroup = 2131165379;
 			
-			// aapt resource value: 0x7f0700c0
-			public const int txt_Delete = 2131165376;
+			// aapt resource value: 0x7f0700c6
+			public const int txtView_nameFoundGroup = 2131165382;
+			
+			// aapt resource value: 0x7f0700c2
+			public const int txtView_nameGroup = 2131165378;
 			
 			// aapt resource value: 0x7f07002e
 			public const int uniform = 2131165230;
@@ -3215,8 +3221,8 @@ namespace VkPostDownloader
 			// aapt resource value: 0x7f070016
 			public const int view_offset_helper = 2131165206;
 			
-			// aapt resource value: 0x7f0700dc
-			public const int visible = 2131165404;
+			// aapt resource value: 0x7f0700db
+			public const int visible = 2131165403;
 			
 			// aapt resource value: 0x7f07003d
 			public const int withText = 2131165245;
@@ -3531,7 +3537,10 @@ namespace VkPostDownloader
 			public const int nav_menu = 2131558401;
 			
 			// aapt resource value: 0x7f0d0002
-			public const int search_menu = 2131558402;
+			public const int popup_menu = 2131558402;
+			
+			// aapt resource value: 0x7f0d0003
+			public const int search_menu = 2131558403;
 			
 			static Menu()
 			{
@@ -3689,6 +3698,12 @@ namespace VkPostDownloader
 			
 			// aapt resource value: 0x7f0a0028
 			public const int path_password_strike_through = 2131361832;
+			
+			// aapt resource value: 0x7f0a003c
+			public const int popup_item_delete = 2131361852;
+			
+			// aapt resource value: 0x7f0a003b
+			public const int popup_item_refresh = 2131361851;
 			
 			// aapt resource value: 0x7f0a0013
 			public const int search_menu_title = 2131361811;

@@ -21,9 +21,12 @@ namespace VkPostDownloader
         {
             var view = inflater.Inflate(Resource.Layout.login_layout, container, false);
             Cheeseknife.Inject(this, view);
-          
             return view;
         }
+
+       
+
+
         public override void OnDestroyView()
         {
             base.OnDestroyView();
@@ -32,7 +35,7 @@ namespace VkPostDownloader
         [InjectOnClick(Resource.Id.sign_in_button)]
         void OnClickMyButton(object sender, EventArgs e)
         {
-            VKSdk.Login(Activity, MainApplication.MyScopes);
+            VKSdk.Login(this, MainApplication.MyScopes);
         }
 
         public async override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
@@ -59,5 +62,7 @@ namespace VkPostDownloader
                 Console.WriteLine("User didn't pass Authorization: " + ex);
             }
         }
+
+      
     }
 }

@@ -56,9 +56,6 @@ namespace VkPostDownloader
             setupDrawerContent(navigationView);
             navigationView.NavigationItemSelected += NavigationView_NavigationItemSelected;
 
-
-          
-
             return view;
         }
 
@@ -69,7 +66,7 @@ namespace VkPostDownloader
             {
                 recyclerView.HasFixedSize = true;
 
-                _adapter = new FollowerGroupsItemAdapter(await GetFollowerGroups());
+                _adapter = new FollowerGroupsItemAdapter(await GetFollowerGroups(), this.Activity);
 
                 var layoutManager = new LinearLayoutManager(this.Activity.BaseContext);
                 recyclerView.SetLayoutManager(layoutManager);
@@ -96,7 +93,7 @@ namespace VkPostDownloader
             switch (menuItem.ItemId)
             {
                 case Resource.Id.nav_followers:
-                    fragment = new ItemFragment();
+                    fragment = new FollowersFragment();
                     break;
 
                 case Resource.Id.nav_search:
@@ -111,8 +108,6 @@ namespace VkPostDownloader
             FragmentTransaction fragmentTx = this.FragmentManager.BeginTransaction();
             fragmentTx.Replace(Resource.Id.fragment_container, fragment).AddToBackStack(null).Commit();
 
-
-            // Закрыть navigation drawer
             drawerLayout.CloseDrawers();
         }
 
@@ -153,7 +148,8 @@ namespace VkPostDownloader
             _searchView.QueryTextSubmit += (s, e) =>
             {
                 // Handle enter/search button on keyboard here
-                Toast.MakeText(this.Activity.BaseContext, "Searched for: " + e.Query, ToastLength.Short).Show();
+                //Toast.MakeText(this.Activity.BaseContext, "Searched for: " + e.Query, ToastLength.Short).Show();
+                this.Activity.Window.SetSoftInputMode(SoftInput.StateHidden);
                 e.Handled = true;
             };
 

@@ -19,4 +19,6 @@
   <string name="nav_item_search">поиск</string>
   <string name="nav_item_logout">Выход</string>
 
+  <string name="popup_item_refresh">Перезагрузить</string>
+  <string name="popup_item_delete">Удалить</string>
 </resources>

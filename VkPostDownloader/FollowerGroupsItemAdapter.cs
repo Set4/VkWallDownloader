@@ -20,13 +20,16 @@ namespace VkPostDownloader
 {
     class FollowerGroupsItemAdapter : RecyclerView.Adapter, IFilterable
     {
+        public event EventHandler<int> ItemClick;
+
         private List<GroupItem> _items;
         private List<GroupItem> _originalData;
         public Filter Filter { get; private set; }
-
-        public FollowerGroupsItemAdapter(IEnumerable<GroupItem> items)
+        Activity _context;
+        public FollowerGroupsItemAdapter(IEnumerable<GroupItem> items, Activity context)
         {
             _items = items.OrderBy(s => s.Name).ToList();
+            this._context = context;
             Filter = new GroupItemFilter(this);
         }
 
@@ -39,14 +42,14 @@ namespace VkPostDownloader
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
             View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.vh_groupltem, parent, false);
-            ViewHolder vh = new ViewHolder(itemView);
+            ViewHolder vh = new ViewHolder(itemView, OnClick);
             return vh;
         }
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
             ViewHolder vh = holder as ViewHolder;
-
+          //.LoadFile(FFImageLoading.Work.ImageSource.ApplicationBundle + _items[position].Photo)
             ImageService.Instance.LoadFile(FFImageLoading.Work.ImageSource.ApplicationBundle+_items[position].Photo)
               .Retry(2, 200)
               .LoadingPlaceholder("ic_done", FFImageLoading.Work.ImageSource.CompiledResource)
@@ -57,17 +60,32 @@ namespace VkPostDownloader
             vh.Name.Text = _items[position].Name;
             vh.CountWall.Text = _items[position].CountPosts.ToString();
 
-          
+
+         
+            /*
+           
+            */
+
+            vh.KeyItem = _items[position].Key;
         }
 
-       
+        private void OnClick(int position)
+        {
+            Bundle bundle = new Bundle();
+            bundle.PutInt("key", _items[position].Key);
+
+            FragmentTransaction fragmentTx = _context.FragmentManager.BeginTransaction();
+            Fragment fagment = new ItemFragment();
+            fagment.Arguments = bundle;
+            fragmentTx.Replace(Resource.Id.fragment_container, fagment).AddToBackStack(null).Commit();
+        }
 
         public override int ItemCount
         {
             get { return _items.Count; }
         }
 
-        class ViewHolder : RecyclerView.ViewHolder, Android.Support.V7.Widget.PopupMenu.IOnMenuItemClickListener, View.IOnCreateContextMenuListener, IMenuItemOnMenuItemClickListener
+        class ViewHolder : RecyclerView.ViewHolder, Android.Support.V7.Widget.PopupMenu.IOnMenuItemClickListener, IMenuItemOnMenuItemClickListener
         {
             [InjectView(Resource.Id.txtView_nameGroup)]
             public TextView Name { get; private set; }
@@ -77,46 +95,43 @@ namespace VkPostDownloader
             public ImageViewAsync Image { get; private set; }
 
             [InjectView(Resource.Id.btn_popupMenu)]
-            public Button Button { get; private set; }
+            public ImageButton Button { get; private set; }
 
-            public ViewHolder(View view) : base(view)
+            public int KeyItem { get; set; }
+
+            public ViewHolder(View view, Action<int> listener) : base(view)
             {
                 Cheeseknife.Inject(this, view);
 
-                view.SetOnCreateContextMenuListener(this);
-
-                Button.Click += (s,e)=>
+                Button.Click += (s, e) =>
                     {
-                    Android.Support.V7.Widget.PopupMenu popup = new Android.Support.V7.Widget.PopupMenu(view.Context, view);
-                    popup.Inflate(Resource.Menu.nav_menu);
-                    popup.SetOnMenuItemClickListener(this);
-                    popup.Show();
-                };
+                        Android.Support.V7.Widget.PopupMenu popup = new Android.Support.V7.Widget.PopupMenu(view.Context, (View)s);
+                        popup.Inflate(Resource.Menu.popup_menu);
 
+                        popup.SetOnMenuItemClickListener(this);
+                        popup.Show();
+                    };
+
+                view.Click += (sender, e) => listener(base.Position);
             }
 
+          
 
             public bool OnMenuItemClick(IMenuItem item)
             {
                 switch (item.ItemId)
                 {
-                    case 1:
-                        //Do stuff
+                    case Resource.Id.popup_item_refresh:
+                    //  DbHelper.ClearPosts(Button.Tag)
                         break;
 
-                    case 2:
+                    case Resource.Id.popup_item_delete:
                         //Do stuff
 
                         break;
                 }
                 return true;
-            }
-
-            public void OnCreateContextMenu(IContextMenu menu, View v, IContextMenuContextMenuInfo menuInfo)
-            {
-                var Edit = menu.Add(Menu.First, 1, 1, "Edit");
-                Edit.SetOnMenuItemClickListener(this);
-            }
+            }         
         }
 
         class GroupItemFilter : Filter
@@ -180,6 +195,7 @@ namespace VkPostDownloader
 
         public bool OnMenuItemActionCollapse(IMenuItem item)
         {
+            if(_adapter!=null)
             _adapter.Filter.InvokeFilter("");
             return true;
         }

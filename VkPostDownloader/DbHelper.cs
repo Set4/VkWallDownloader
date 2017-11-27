@@ -18,6 +18,7 @@ namespace VkPostDownloader
     //
     static class DbHelper
     {
+       
         public static async Task<int> Insert<T>(T item, SQLiteAsyncConnection connection)where T: IItemModel
         {
             return await connection.InsertAsync(item);
@@ -38,7 +39,13 @@ namespace VkPostDownloader
         {
             return await connection.QueryAsync<T>(query, args);
         }
-      
+
+        public static async Task<GroupItem> GetItem(int Key, SQLiteAsyncConnection connection)
+        {
+            return await connection.Table<GroupItem>().Where(item => item.Key == Key).FirstOrDefaultAsync();
+           // return await connection.Table<T>().Where(i=> ((IItemModel)i).Key == Key).FirstOrDefaultAsync();
+            
+        }
 
         public static async Task<int> GetCountWalls(int groupItemKey, SQLiteAsyncConnection connection) 
         {

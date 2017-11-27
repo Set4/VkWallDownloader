@@ -13,7 +13,7 @@ namespace VkPostDownloader
     [Activity(Theme = "@style/MyTheme.Base", Label = "VkPostDownloader", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class MainActivity : AppCompatActivity
     {
-
+        private bool isResumed = false;
         public SQLiteAsyncConnection Connection { get; private set; }
         public Intent DownloadIntent { get; private set; }
 
@@ -32,16 +32,18 @@ namespace VkPostDownloader
             VKSdk.WakeUpSession(this,
              response =>
              {
-                 if (response == VKSdk.LoginState.LoggedOut)
+                 if (isResumed)
                  {
-                     ShowLogin();
+                     if (response == VKSdk.LoginState.LoggedOut)
+                     {
+                         ShowLogin();
+                     }
+                     else if (response == VKSdk.LoginState.LoggedIn)
+                     {
+                         FragmentTransaction fragmentTx = this.FragmentManager.BeginTransaction();
+                         fragmentTx.Replace(Resource.Id.fragment_container, new FollowersFragment()).Commit();
+                     }
                  }
-                 else if (response == VKSdk.LoginState.LoggedIn)
-                 {
-                     FragmentTransaction fragmentTx = this.FragmentManager.BeginTransaction();
-                     fragmentTx.Replace(Resource.Id.fragment_container, new FollowersFragment()).Commit();
-                 }
-
              },
              error =>
              {
@@ -56,13 +58,15 @@ namespace VkPostDownloader
         protected override void OnResume()
         {
             base.OnResume();
-           
+            isResumed = true;
             if (!VKSdk.IsLoggedIn)
                 ShowLogin();
         }
 
+
         protected override void OnPause()
-        {            
+        {
+            isResumed = false;
             base.OnPause();
         }
 
@@ -75,7 +79,7 @@ namespace VkPostDownloader
         private void ShowLogin()
         {
             FragmentTransaction fragmentTx = this.FragmentManager.BeginTransaction();
-            fragmentTx.Replace(Resource.Id.fragment_container, new LoginFragment()).Commit();
+            fragmentTx.Replace(Resource.Id.fragment_container, new LoginFragment()).CommitAllowingStateLoss();
         }
 
 
@@ -103,6 +107,8 @@ namespace VkPostDownloader
             }
             return;
         }
+
+      
     }
 
     

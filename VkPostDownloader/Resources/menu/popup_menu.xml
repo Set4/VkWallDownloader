@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+  <item
+      android:id="@+id/popup_item_refresh"
+      android:title="@string/popup_item_refresh" />
+  <item
+      android:id="@+id/popup_item_delete"
+      android:title="@string/popup_item_delete" />
+</menu>

@@ -44,33 +44,29 @@ namespace VkPostDownloader
             VKSdk.Logout();
             if (!VKSdk.IsLoggedIn)
             {
-                //((AppCompatActivity)this.Activity).SupportFragmentManager
-                //.BeginTransaction()
-                //.Replace(Resource.Id.container, new LoginFragment())
-                //.CommitAllowingStateLoss();
                 FragmentTransaction fragmentTx = this.FragmentManager.BeginTransaction();
-                fragmentTx.Replace(Resource.Id.fragment_container, new LoginFragment()).Commit();
+                fragmentTx.Replace(Resource.Id.fragment_container, new LoginFragment()).CommitAllowingStateLoss();
             }
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            switch (item.ItemId)
-            {
-                case Resource.Id.home:
-                    // onBackPressed();
-                    break;
-                case Resource.Id.homeAsUp:
-                    //  onBackPressed();
-                    break;
-                case 16908332:
-                    // onBackPressed();
-                    break;
-                case Resource.Id.action_settingsSearch:
+            //switch (item.ItemId)
+            //{
+            //    case Resource.Id.home:
+            //        this.Activity.OnBackPressed();
+            //        break;
+            //    case Resource.Id.homeAsUp:
+            //        this.Activity.OnBackPressed();
+            //        break;
+            //    case 16908332:
+            //        this.Activity.OnBackPressed();
+            //        break;
+            //    case Resource.Id.action_settingsSearch:
 
-                    break;
+            //        break;
 
-            }
+            //}
             return base.OnOptionsItemSelected(item);
         }
     }
