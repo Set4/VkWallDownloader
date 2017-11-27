@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <item
+    app:contentInsetStartWithNavigation="0dp"
+     android:id="@+id/action_settingsSearch"
+     android:title="@string/toolbar_menu_add"
+     android:icon="@drawable/ic_add_white_24dp"     
+      android:orderInCategory="1"
+     app:showAsAction="always" />
+  <item
+    app:contentInsetStartWithNavigation="0dp"
+      android:id="@+id/action_searchNet"      
+      app:showAsAction="always"
+      app:actionViewClass="android.support.v7.widget.SearchView"
+      android:iconifiedByDefault="true"    
+      android:title="Search" />
+
+</menu>

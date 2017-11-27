@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <group android:checkableBehavior="single">
+    <item
+      android:id="@+id/nav_followers"
+      android:icon="@drawable/ic_dashboard"
+      android:title="@string/nav_item_follower" />
+    <item
+      android:id="@+id/nav_search"
+      android:icon="@drawable/ic_search_black_36dp"
+      android:title="@string/nav_item_search" />
+  </group>
+  <item>
+    <menu>
+      <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_exit_to_app_black_36dp"
+        android:title="@string/nav_item_logout" />     
+    </menu>
+  </item>
+</menu>

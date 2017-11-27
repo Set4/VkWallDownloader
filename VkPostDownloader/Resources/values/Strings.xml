@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">VkPostDownloader</string>
+
+  <string name="drawer_open">Open</string>
+  <string name="drawer_close">Close</string>
+  <string name="toolbar_menu_add">Add</string>
+
+
+  <integer name="com_vk_sdk_AppId">6268599</integer>
+  <string name="vk_data_theme">vk6268599</string>
+  
+  <string name="missed_access_token_message">AccessToken invalidated</string>
+  <string name="action_sign_in_short">Sign</string>
+  <string name="action_logout_in_short">Logout</string>
+  
+  
+  <string name="nav_item_follower">Отслеживаемые</string>
+  <string name="nav_item_search">поиск</string>
+  <string name="nav_item_logout">Выход</string>
+
 </resources>
