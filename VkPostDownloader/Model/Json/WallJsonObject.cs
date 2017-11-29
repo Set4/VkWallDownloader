@@ -1,22 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-
-namespace VkPostDownloader
+﻿namespace VkPostDownloader.Model.Json.Wall
 {
     class WallJsonObject
     {
     }
-
-
 
     public class Rootobject
     {
@@ -163,6 +149,4 @@ namespace VkPostDownloader
         public string photo_100 { get; set; }
         public string photo_200 { get; set; }
     }
-
-
 }

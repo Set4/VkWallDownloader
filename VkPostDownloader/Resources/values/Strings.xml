@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">VkPostDownloader</string>
-
-  <string name="drawer_open">Open</string>
-  <string name="drawer_close">Close</string>
-  <string name="toolbar_menu_add">Add</string>
-
-
+  <string name="app_name">Загрузка Постов ВК</string>
   <integer name="com_vk_sdk_AppId">6268599</integer>
   <string name="vk_data_theme">vk6268599</string>
   
-  <string name="missed_access_token_message">AccessToken invalidated</string>
-  <string name="action_sign_in_short">Sign</string>
+  <!--Navigation Drawer-->
+  <string name="drawer_open">Open</string>
+  <string name="drawer_close">Close</string>
+
+  <!--toolbar button-->
+  <string name="toolbar_menu_add">Add</string>
+  
+  <string name="missed_access_token_message">Токен доступа недействителен</string>
+  <string name="action_sign_in_short">Авторизация</string>
   <string name="action_logout_in_short">Logout</string>
   
-  
+  <!--Navigation menu items-->
   <string name="nav_item_follower">Отслеживаемые</string>
-  <string name="nav_item_search">поиск</string>
-  <string name="nav_item_logout">Выход</string>
+  <string name="nav_item_search">Поиск</string>
+  <string name="nav_item_logout">Выйти</string>
 
+  <!--popup menu item: follower item-->
   <string name="popup_item_refresh">Перезагрузить</string>
   <string name="popup_item_delete">Удалить</string>
 </resources>

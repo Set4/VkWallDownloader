@@ -1,23 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Android.App;
-using Android.Content;
 using Android.OS;
 using Android.Runtime;
-using Android.Util;
 using Android.Views;
-using Android.Widget;
 using Com.Lilarcor.Cheeseknife;
 using Android.Support.V7.Widget;
 using Android.Support.V7.App;
 using Android.Support.V4.View;
 using System.Threading.Tasks;
-using VKontakte.API;
-using Newtonsoft.Json;
-using VKontakte;
+using VkPostDownloader.UtilityClasses;
 
 namespace VkPostDownloader
 {
@@ -86,7 +78,7 @@ namespace VkPostDownloader
                 case Resource.Id.homeAsUp:
                     //  onBackPressed();
                     break;
-                case 16908332:
+                case Android.Resource.Id.Icon:
                     // onBackPressed();
                     break;
                 case Resource.Id.action_settingsSearch:
@@ -106,20 +98,19 @@ namespace VkPostDownloader
             var searchView = MenuItemCompat.GetActionView(item);
             this.searchView = searchView.JavaCast<Android.Support.V7.Widget.SearchView>();
 
-            this.searchView.QueryTextSubmit += _searchView_QueryTextSubmit;          
+            this.searchView.QueryTextSubmit += SearchViewQueryTextSubmit;          
             this.searchView.SetIconifiedByDefault(false);
             base.OnCreateOptionsMenu(menu, inflater);
         }
 
-        private async void _searchView_QueryTextSubmit(object sender, Android.Support.V7.Widget.SearchView.QueryTextSubmitEventArgs e)
+        private async void SearchViewQueryTextSubmit(object sender, Android.Support.V7.Widget.SearchView.QueryTextSubmitEventArgs e)
         {
             seachQuery = e.Query;
             e.Handled = true;
-
-
             adapter.Clear();
             await AddSearchResult(seachQuery, count, page * count);
         }
+
         private async void OnScrollListener_LoadMoreEvent(object sender, EventArgs e)
         {
             await AddSearchResult(seachQuery, count, page * count);
@@ -128,97 +119,11 @@ namespace VkPostDownloader
         private async Task AddSearchResult(string query, int count, int offset)
         {
             //TODO: progress bar
-            adapter.AddRange(await GetSearchResult(seachQuery, count, page * count));
+            adapter.AddRange(await GroupsSearchHelper.GetSearchResult(seachQuery, count, page * count, ((MainActivity)this.Activity).Connection));
             page++;
             //TODO:Progress bar
 
             return;
         }
-
-
-        #region Search
-
-        private Task<List<GroupItem>> GetSearchResult(string query, int count, int offset)
-        {
-            return Task.Run(async () =>
-            {
-                List<GroupItem> items = new List<GroupItem>();
-                try
-                {
-                    var request = VKApi.Groups.Search(VKParameters.From(VKApiConst.Q, query, VKApiConst.Offset, offset, VKApiConst.Count, count, "type", "group, page", VKApiConst.AccessToken, VKSdk.AccessToken));
-                    var response = await request.ExecuteAsync();
-
-                    var data = JsonConvert.DeserializeObject<Rootobject>(response.Json.ToString());
-                    //var jsonArray = response.Json.OptJSONArray(@"response");
-
-                    GroupItem itemGroup;
-
-                    if (data.response.count > 0)
-                    {
-                        foreach (var item in RemoveCloseGroups(data.response.items))
-                        {
-                            itemGroup = ConvertToGroupItem(item);
-                            itemGroup.IsExist = await DbHelper.CheckIsExist<GroupItem>(itemGroup.Id, ((MainActivity)this.Activity).Connection);
-                            items.Add(itemGroup);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    //ToDO: log
-                }
-
-                return items;
-            });
-        }
-
-        private IEnumerable<GroupJsonModel> RemoveCloseGroups(IEnumerable<GroupJsonModel> items)
-        {
-            return items.Where(i => i.is_closed == 0 || i.is_admin == 1 || i.is_member == 1);
-        }
-
-        private GroupItem ConvertToGroupItem(GroupJsonModel item)
-        {
-            return new GroupItem()
-            {
-                Id = item.id,
-                Name = item.name,
-                Photo = item.photo_100,
-                ScreenName = item.screen_name,
-                Type = item.type
-            };
-        }
-
-        public class Rootobject
-        {
-            public Response response { get; set; }
-        }
-
-        public class Response
-        {
-            public int count { get; set; }
-            public GroupJsonModel[] items { get; set; }
-        }
-
-        public class GroupJsonModel
-        {
-            public int id { get; set; }
-            public string name { get; set; }
-            public string screen_name { get; set; }
-            public int is_closed { get; set; }
-            public string type { get; set; }
-            public int is_admin { get; set; }
-            public int is_member { get; set; }
-            public string photo_50 { get; set; }
-            public string photo_100 { get; set; }
-            public string photo_200 { get; set; }
-        }
-
-
-       
-
-        #endregion
-
-
     }
 }

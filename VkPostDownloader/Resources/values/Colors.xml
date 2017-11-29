@@ -7,9 +7,6 @@
   <color name="window_background">#F5F5F5</color>
   <color name="splash_background">#FFFFFF</color>
   <color name="nav_header_background">#0099ff</color>
-
   <color name="pink_pressed">#0099ff</color>
-
   <color name="pink">#0099ff</color>
-
 </resources>

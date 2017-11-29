@@ -17,6 +17,9 @@ using Android.Support.V4.Widget;
 using Android.Support.V7.Widget;
 using Android.Support.V4.View;
 using System.Threading.Tasks;
+using VkPostDownloader.Adapters;
+using VkPostDownloader.UtilityClasses;
+using VkPostDownloader.Model;
 
 namespace VkPostDownloader
 {
@@ -74,14 +77,11 @@ namespace VkPostDownloader
             }
         }
              
-
         public override void OnDestroyView()
         {
             base.OnDestroyView();
             Cheeseknife.Reset(this);
         }
-
-
 
         private void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
         {
@@ -95,7 +95,6 @@ namespace VkPostDownloader
                 case Resource.Id.nav_followers:
                     fragment = new FollowersFragment();
                     break;
-
                 case Resource.Id.nav_search:
                     fragment = new SearchGroupFragment();
                     break;
@@ -129,7 +128,6 @@ namespace VkPostDownloader
                     FragmentTransaction fragmentTx = this.FragmentManager.BeginTransaction();
                     fragmentTx.Replace(Resource.Id.fragment_container, new SearchGroupFragment()).AddToBackStack(null).Commit();
                     break;
-
             }
             return base.OnOptionsItemSelected(item);
         }
@@ -142,27 +140,20 @@ namespace VkPostDownloader
             var searchView = MenuItemCompat.GetActionView(item);
 
             _searchView = searchView.JavaCast<Android.Support.V7.Widget.SearchView>();
-
             _searchView.QueryTextChange += (s, e) => _adapter.Filter.InvokeFilter(e.NewText);
-
             _searchView.QueryTextSubmit += (s, e) =>
-            {
-                // Handle enter/search button on keyboard here
-                //Toast.MakeText(this.Activity.BaseContext, "Searched for: " + e.Query, ToastLength.Short).Show();
+            {                
                 this.Activity.Window.SetSoftInputMode(SoftInput.StateHidden);
                 e.Handled = true;
             };
 
             MenuItemCompat.SetOnActionExpandListener(item, new SearchViewExpandListener(_adapter));
-
-           
+            
             base.OnCreateOptionsMenu(menu, inflater);
         }
 
-
         private async Task<IEnumerable<GroupItem>> GetFollowerGroups()
         {
-
             IEnumerable<GroupItem> items = null;
             try
             {
@@ -174,7 +165,6 @@ namespace VkPostDownloader
                 {
                     item.CountPosts= await DbHelper.GetCountWalls(item.Key,((MainActivity)this.Activity).Connection);
                 }
-
             }
             catch (Exception ex)
             {

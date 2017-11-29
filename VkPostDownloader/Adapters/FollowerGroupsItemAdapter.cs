@@ -15,22 +15,27 @@ using Java.Lang;
 using Android.Support.V4.View;
 using FFImageLoading.Views;
 using FFImageLoading;
+using VkPostDownloader.Model;
+using VkPostDownloader.UtilityClasses.CommonClasses;
 
-namespace VkPostDownloader
+namespace VkPostDownloader.Adapters
 {
     class FollowerGroupsItemAdapter : RecyclerView.Adapter, IFilterable
     {
-        public event EventHandler<int> ItemClick;
-
         private List<GroupItem> _items;
         private List<GroupItem> _originalData;
+        private Activity _context;
+
         public Filter Filter { get; private set; }
-        Activity _context;
+
+        public event EventHandler<int> ItemClick;
+
+        
         public FollowerGroupsItemAdapter(IEnumerable<GroupItem> items, Activity context)
         {
             _items = items.OrderBy(s => s.Name).ToList();
-            this._context = context;
-            Filter = new GroupItemFilter(this);
+            _context = context;
+            Filter = new FollowerGroupItemFilter(this);
         }
 
         public void AddRange(List<GroupItem> items)
@@ -42,14 +47,14 @@ namespace VkPostDownloader
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
             View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.vh_groupltem, parent, false);
-            ViewHolder vh = new ViewHolder(itemView, OnClick);
+            FollowerGroupViewHolder vh = new FollowerGroupViewHolder(itemView, OnClick);
             return vh;
         }
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-            ViewHolder vh = holder as ViewHolder;
-          //.LoadFile(FFImageLoading.Work.ImageSource.ApplicationBundle + _items[position].Photo)
+            FollowerGroupViewHolder vh = holder as FollowerGroupViewHolder;
+        
             ImageService.Instance.LoadFile(FFImageLoading.Work.ImageSource.ApplicationBundle+_items[position].Photo)
               .Retry(2, 200)
               .LoadingPlaceholder("ic_done", FFImageLoading.Work.ImageSource.CompiledResource)
@@ -58,14 +63,7 @@ namespace VkPostDownloader
               .IntoAsync(vh.Image);
 
             vh.Name.Text = _items[position].Name;
-            vh.CountWall.Text = _items[position].CountPosts.ToString();
-
-
-         
-            /*
-           
-            */
-
+            vh.CountWall.Text = _items[position].CountPosts.ToString();            
             vh.KeyItem = _items[position].Key;
         }
 
@@ -85,7 +83,7 @@ namespace VkPostDownloader
             get { return _items.Count; }
         }
 
-        class ViewHolder : RecyclerView.ViewHolder, Android.Support.V7.Widget.PopupMenu.IOnMenuItemClickListener, IMenuItemOnMenuItemClickListener
+        class FollowerGroupViewHolder : RecyclerView.ViewHolder, Android.Support.V7.Widget.PopupMenu.IOnMenuItemClickListener, IMenuItemOnMenuItemClickListener
         {
             [InjectView(Resource.Id.txtView_nameGroup)]
             public TextView Name { get; private set; }
@@ -93,13 +91,12 @@ namespace VkPostDownloader
             public TextView CountWall { get; private set; }
             [InjectView(Resource.Id.imgView_imageGroup)]
             public ImageViewAsync Image { get; private set; }
-
             [InjectView(Resource.Id.btn_popupMenu)]
             public ImageButton Button { get; private set; }
 
             public int KeyItem { get; set; }
 
-            public ViewHolder(View view, Action<int> listener) : base(view)
+            public FollowerGroupViewHolder(View view, Action<int> listener) : base(view)
             {
                 Cheeseknife.Inject(this, view);
 
@@ -134,10 +131,10 @@ namespace VkPostDownloader
             }         
         }
 
-        class GroupItemFilter : Filter
+        class FollowerGroupItemFilter : Filter
         {
             private readonly FollowerGroupsItemAdapter _adapter;
-            public GroupItemFilter(FollowerGroupsItemAdapter adapter)
+            public FollowerGroupItemFilter(FollowerGroupsItemAdapter adapter)
             {
                 _adapter = adapter;
             }
@@ -153,14 +150,11 @@ namespace VkPostDownloader
 
                 if (_adapter._originalData != null && _adapter._originalData.Any())
                 {
-                    // Compare constraint to all names lowercased. 
-                    // It they are contained they are added to results.
                     results.AddRange(
                         _adapter._originalData.Where(
                             chemical => chemical.Name.ToLower().Contains(constraint.ToString())));
                 }
-
-                // Nasty piece of .NET to Java wrapping, be careful with this!
+                
                 returnObj.Values = FromArray(results.Select(r => r.ToJavaObject()).ToArray());
                 returnObj.Count = results.Count;
 
@@ -177,72 +171,9 @@ namespace VkPostDownloader
 
                 _adapter.NotifyDataSetChanged();
 
-                // Don't do this and see GREF counts rising
                 constraint.Dispose();
                 results.Dispose();
             }
         }
     }
-
-    class SearchViewExpandListener : Java.Lang.Object, MenuItemCompat.IOnActionExpandListener
-    {
-        private readonly IFilterable _adapter;
-
-        public SearchViewExpandListener(IFilterable adapter)
-        {
-            _adapter = adapter;
-        }
-
-        public bool OnMenuItemActionCollapse(IMenuItem item)
-        {
-            if(_adapter!=null)
-            _adapter.Filter.InvokeFilter("");
-            return true;
-        }
-
-        public bool OnMenuItemActionExpand(IMenuItem item)
-        {
-            return true;
-        }
-    }
-
-    class JavaHolder : Java.Lang.Object
-    {
-        public readonly object Instance;
-
-        public JavaHolder(object instance)
-        {
-            Instance = instance;
-        }
-    }
-
-    static class ObjectExtensions
-    {
-        public static TObject ToNetObject<TObject>(this Java.Lang.Object value)
-        {
-            if (value == null)
-                return default(TObject);
-
-            if (!(value is JavaHolder))
-                throw new InvalidOperationException("Unable to convert to .NET object. Only Java.Lang.Object created with .ToJavaObject() can be converted.");
-
-            TObject returnVal;
-            try { returnVal = (TObject)((JavaHolder)value).Instance; }
-            finally { value.Dispose(); }
-            return returnVal;
-        }
-
-        public static Java.Lang.Object ToJavaObject<TObject>(this TObject value)
-        {
-            if (Equals(value, default(TObject)) && !typeof(TObject).IsValueType)
-                return null;
-
-            var holder = new JavaHolder(value);
-
-            return holder;
-        }
-    }
-
-
- 
 }

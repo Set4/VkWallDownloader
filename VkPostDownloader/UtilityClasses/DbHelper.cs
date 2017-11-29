@@ -1,24 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using SQLite;
 using System.Threading.Tasks;
 using System.IO;
+using VkPostDownloader.Model;
 
-namespace VkPostDownloader
+namespace VkPostDownloader.UtilityClasses
 {
-    //
     static class DbHelper
     {
-       
+        public static async Task<SQLiteAsyncConnection> CreateConnection(string path)
+        {
+            SQLiteAsyncConnection connection = null;
+            try
+            {
+                if (!File.Exists(path))
+                {
+                    connection = new SQLiteAsyncConnection(path);
+                    await connection.CreateTableAsync<GroupItem>();
+                    await connection.CreateTableAsync<PostItem>();
+                    await connection.CreateTableAsync<ImageItem>();
+                }
+                else
+                    connection = new SQLiteAsyncConnection(path);
+            }
+            catch (Exception ex)
+            {
+                //TODO: log error
+                Console.WriteLine("CreateConnection error: " + ex);
+            }
+            return connection;
+        }
+
         public static async Task<int> Insert<T>(T item, SQLiteAsyncConnection connection)where T: IItemModel
         {
             return await connection.InsertAsync(item);
@@ -42,9 +56,12 @@ namespace VkPostDownloader
 
         public static async Task<GroupItem> GetItem(int Key, SQLiteAsyncConnection connection)
         {
-            return await connection.Table<GroupItem>().Where(item => item.Key == Key).FirstOrDefaultAsync();
-           // return await connection.Table<T>().Where(i=> ((IItemModel)i).Key == Key).FirstOrDefaultAsync();
-            
+            return await connection.Table<GroupItem>().Where(item => item.Key == Key).FirstOrDefaultAsync();            
+        }
+
+        public static void ResetPoolConnection()
+        {
+            SQLiteAsyncConnection.ResetPool();
         }
 
         public static async Task<int> GetCountWalls(int groupItemKey, SQLiteAsyncConnection connection) 
@@ -54,9 +71,7 @@ namespace VkPostDownloader
 
         public static async Task ClearGroupItem(GroupItem item, SQLiteAsyncConnection connection)
         {
-
           await  connection.RunInTransactionAsync( tran => {
-
                 try
                 {
                   if(File.Exists(item.PhotoPath))
@@ -94,14 +109,9 @@ namespace VkPostDownloader
         public static async Task ClearPosts(int groupItemKey, SQLiteAsyncConnection connection)
         {
             await connection.RunInTransactionAsync(tran => {
-
                 try
                 {
-
-                   
                     List<PostItem> posts = tran.Table<PostItem>().Where(i => i.GroupItemKey == groupItemKey).ToList();
-
-                   
                     foreach (var p in posts)
                     {
                         foreach (var img in tran.Table<ImageItem>().Where(i => i.PostItemKey == p.Key))
@@ -113,7 +123,6 @@ namespace VkPostDownloader
                         }
                         tran.Delete(p);
                     }
-
                     tran.Commit();
                 }
                 catch (Exception ex)

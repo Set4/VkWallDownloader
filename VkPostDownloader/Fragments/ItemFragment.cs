@@ -17,19 +17,19 @@ using static Android.Support.V4.Widget.SwipeRefreshLayout;
 using System.Threading.Tasks;
 using FFImageLoading;
 using FFImageLoading.Views;
+using VkPostDownloader.UtilityClasses;
+using VkPostDownloader.Model;
 
 namespace VkPostDownloader
 {
     public class ItemFragment : Fragment, IOnRefreshListener
     {
-
         [InjectView(Resource.Id.toolbar_item)]
         Android.Support.V7.Widget.Toolbar toolbar;
         [InjectView(Resource.Id.rcView_itemPosts)]
         RecyclerView recyclerView;
         [InjectView(Resource.Id.swpRefresh_updateWalls)]
-        Android.Support.V4.Widget.SwipeRefreshLayout swipeRefreshLayout;
-     
+        Android.Support.V4.Widget.SwipeRefreshLayout swipeRefreshLayout;     
         [InjectView(Resource.Id.imgView_imageItem)]
         public ImageViewAsync Image;
 
@@ -55,7 +55,6 @@ namespace VkPostDownloader
         {
             var view = inflater.Inflate(Resource.Layout.item_layout, null);
             Cheeseknife.Inject(this, view);
-
 
             swipeRefreshLayout.SetOnRefreshListener(this);
 
@@ -88,16 +87,15 @@ namespace VkPostDownloader
 
             var item = await GetGroupItem(currentGroupItemKey);
             if (item != null)
-            {
-               
+            {               
                 ((AppCompatActivity)this.Activity).Title = item.Name;
             
                 await ImageService.Instance.LoadFile(item.PhotoPath)
-             .Retry(2, 200)
-             .LoadingPlaceholder("ic_done", FFImageLoading.Work.ImageSource.CompiledResource)
-             .ErrorPlaceholder("ic_action", FFImageLoading.Work.ImageSource.CompiledResource)
-             .Error(e => System.Diagnostics.Debug.WriteLine(e.Message)) //TODO: log                                 
-             .IntoAsync(Image);
+                 .Retry(2, 200)
+                 .LoadingPlaceholder("ic_done", FFImageLoading.Work.ImageSource.CompiledResource)
+                 .ErrorPlaceholder("ic_action", FFImageLoading.Work.ImageSource.CompiledResource)
+                 .Error(e => System.Diagnostics.Debug.WriteLine(e.Message)) //TODO: log                                 
+                 .IntoAsync(Image);
             }
             await GetPOsts(countLoadItems, page * countLoadItems);
         }
@@ -107,7 +105,6 @@ namespace VkPostDownloader
             base.OnDestroyView();
             Cheeseknife.Reset(this);
         }
-
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
@@ -119,13 +116,12 @@ namespace VkPostDownloader
                 case Resource.Id.homeAsUp:
                     //  onBackPressed();
                     break;
-                case 16908332:
+                case Android.Resource.Id.Home:
                     // onBackPressed();
                     break;
                 case Resource.Id.action_settingsSearch:
-
+                    // onBackPressed();
                     break;
-
             }
             return base.OnOptionsItemSelected(item);
         }
@@ -135,9 +131,15 @@ namespace VkPostDownloader
             inflater.Inflate(Resource.Menu.action_menu, menu);
             base.OnCreateOptionsMenu(menu, inflater);
         }
-
-
-
+        
+        public async void OnRefresh()
+        {
+            swipeRefreshLayout.Refreshing = true;
+            page = 0;
+            adapter.Clear();
+            await GetPOsts(countLoadItems, page * countLoadItems);
+            swipeRefreshLayout.Refreshing = false;
+        }
 
         private async void OnScrollListener_LoadMoreEvent(object sender, EventArgs e)
         {
@@ -161,6 +163,7 @@ namespace VkPostDownloader
             }
             return;
         }
+
         private async Task<GroupItem> GetGroupItem(int key)
         {
             GroupItem item = null;
@@ -173,20 +176,6 @@ namespace VkPostDownloader
                  //TODO:Log
             }
             return item;
-        }
-
-
-        public async void OnRefresh()
-        {
-            // говорим о том, что собираемся начать
-           // Toast.makeText(this, R.string.refresh_started, Toast.LENGTH_SHORT).show();
-            // начинаем показывать прогресс
-            swipeRefreshLayout.Refreshing=true;
-            // ждем 3 секунды и прячем прогресс
-            page = 0;
-            adapter.Clear();
-            await GetPOsts(countLoadItems, page * countLoadItems);
-            swipeRefreshLayout.Refreshing = false;
         }
     }
 }

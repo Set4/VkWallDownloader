@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Com.Lilarcor.Cheeseknife;
@@ -24,14 +20,12 @@ namespace VkPostDownloader
             return view;
         }
 
-       
-
-
         public override void OnDestroyView()
         {
             base.OnDestroyView();
             Cheeseknife.Reset(this);
         }
+
         [InjectOnClick(Resource.Id.sign_in_button)]
         void OnClickMyButton(object sender, EventArgs e)
         {
@@ -62,7 +56,5 @@ namespace VkPostDownloader
                 Console.WriteLine("User didn't pass Authorization: " + ex);
             }
         }
-
-      
     }
 }
