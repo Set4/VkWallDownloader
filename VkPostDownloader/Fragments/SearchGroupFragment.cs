@@ -4,7 +4,6 @@ using Android.App;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
-using Com.Lilarcor.Cheeseknife;
 using Android.Support.V7.Widget;
 using Android.Support.V7.App;
 using Android.Support.V4.View;
@@ -14,10 +13,8 @@ using VkPostDownloader.UtilityClasses;
 namespace VkPostDownloader
 {
     public class SearchGroupFragment : Fragment
-    {
-        [InjectView(Resource.Id.toolbar)]
+    {       
         Android.Support.V7.Widget.Toolbar toolbar;
-        [InjectView(Resource.Id.recyclerV_searchGroups)]
         RecyclerView recyclerView;
 
         SearchGroupsItemAdapter adapter;
@@ -38,7 +35,9 @@ namespace VkPostDownloader
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             var view = inflater.Inflate(Resource.Layout.search_layout, null);
-            Cheeseknife.Inject(this, view);
+
+            toolbar = view.FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            recyclerView = view.FindViewById<RecyclerView>(Resource.Id.recyclerV_searchGroups);
 
             ((AppCompatActivity)this.Activity).SetSupportActionBar(toolbar);
             ((AppCompatActivity)this.Activity).SupportActionBar.SetDisplayHomeAsUpEnabled(true);
@@ -65,7 +64,6 @@ namespace VkPostDownloader
         public override void OnDestroyView()
         {
             base.OnDestroyView();
-            Cheeseknife.Reset(this);
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)

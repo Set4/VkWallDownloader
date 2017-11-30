@@ -10,7 +10,6 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Support.V7.Widget;
-using Com.Lilarcor.Cheeseknife;
 using Java.Lang;
 using Android.Support.V4.View;
 using FFImageLoading.Views;
@@ -84,21 +83,20 @@ namespace VkPostDownloader.Adapters
         }
 
         class FollowerGroupViewHolder : RecyclerView.ViewHolder, Android.Support.V7.Widget.PopupMenu.IOnMenuItemClickListener, IMenuItemOnMenuItemClickListener
-        {
-            [InjectView(Resource.Id.txtView_nameGroup)]
-            public TextView Name { get; private set; }
-            [InjectView(Resource.Id.txtView_countGroup)]
-            public TextView CountWall { get; private set; }
-            [InjectView(Resource.Id.imgView_imageGroup)]
-            public ImageViewAsync Image { get; private set; }
-            [InjectView(Resource.Id.btn_popupMenu)]
+        {           
+            public TextView Name { get; private set; }            
+            public TextView CountWall { get; private set; }           
+            public ImageViewAsync Image { get; private set; }          
             public ImageButton Button { get; private set; }
 
             public int KeyItem { get; set; }
 
             public FollowerGroupViewHolder(View view, Action<int> listener) : base(view)
             {
-                Cheeseknife.Inject(this, view);
+                Name = view.FindViewById<TextView>(Resource.Id.txtView_nameGroup);
+                CountWall = view.FindViewById<TextView>(Resource.Id.txtView_countGroup);
+                Image = view.FindViewById<ImageViewAsync>(Resource.Id.imgView_imageGroup);
+                Button = view.FindViewById<ImageButton>(Resource.Id.btn_popupMenu);
 
                 Button.Click += (s, e) =>
                     {

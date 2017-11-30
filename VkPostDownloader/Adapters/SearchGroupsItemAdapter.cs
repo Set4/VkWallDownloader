@@ -6,7 +6,6 @@ using Android.App;
 using Android.Views;
 using Android.Widget;
 using Android.Support.V7.Widget;
-using Com.Lilarcor.Cheeseknife;
 using FFImageLoading;
 using FFImageLoading.Views;
 using System.Threading.Tasks;
@@ -93,17 +92,17 @@ namespace VkPostDownloader
         }
 
         public class FoundGroupViewHolder : RecyclerView.ViewHolder
-        {
-            [InjectView(Resource.Id.imgView_imageFoundGroup)]
+        {           
             public ImageViewAsync Image { get; private set; }
-            [InjectView(Resource.Id.txtView_nameFoundGroup)]
             public TextView Name { get; private set; }
-            [InjectView(Resource.Id.imgBtn_addToDownload)]
             public ImageButton AddButton { get; private set; }
 
             public FoundGroupViewHolder(View view) : base(view)
             {
-                Cheeseknife.Inject(this, view);
+                Image = view.FindViewById<ImageViewAsync>(Resource.Id.imgView_imageFoundGroup);
+                Name = view.FindViewById<TextView>(Resource.Id.txtView_nameFoundGroup);
+                AddButton = view.FindViewById<ImageButton>(Resource.Id.imgBtn_addToDownload);
+
                 AddButton.Visibility = ViewStates.Gone;
             }
         }

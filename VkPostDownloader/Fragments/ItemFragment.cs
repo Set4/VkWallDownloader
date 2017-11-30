@@ -10,7 +10,6 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
-using Com.Lilarcor.Cheeseknife;
 using Android.Support.V7.Widget;
 using Android.Support.V7.App;
 using static Android.Support.V4.Widget.SwipeRefreshLayout;
@@ -24,14 +23,10 @@ namespace VkPostDownloader
 {
     public class ItemFragment : Fragment, IOnRefreshListener
     {
-        [InjectView(Resource.Id.toolbar_item)]
         Android.Support.V7.Widget.Toolbar toolbar;
-        [InjectView(Resource.Id.rcView_itemPosts)]
         RecyclerView recyclerView;
-        [InjectView(Resource.Id.swpRefresh_updateWalls)]
         Android.Support.V4.Widget.SwipeRefreshLayout swipeRefreshLayout;     
-        [InjectView(Resource.Id.imgView_imageItem)]
-        public ImageViewAsync Image;
+        public ImageViewAsync image;
 
         WallsItemAdapter adapter;
 
@@ -54,7 +49,11 @@ namespace VkPostDownloader
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             var view = inflater.Inflate(Resource.Layout.item_layout, null);
-            Cheeseknife.Inject(this, view);
+
+            toolbar = view.FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar_item);
+            recyclerView = view.FindViewById<RecyclerView>(Resource.Id.rcView_itemPosts);
+            swipeRefreshLayout = view.FindViewById<Android.Support.V4.Widget.SwipeRefreshLayout>(Resource.Id.swpRefresh_updateWalls);
+            image = view.FindViewById<ImageViewAsync>(Resource.Id.imgView_imageItem);
 
             swipeRefreshLayout.SetOnRefreshListener(this);
 
@@ -95,7 +94,7 @@ namespace VkPostDownloader
                  .LoadingPlaceholder("ic_done", FFImageLoading.Work.ImageSource.CompiledResource)
                  .ErrorPlaceholder("ic_action", FFImageLoading.Work.ImageSource.CompiledResource)
                  .Error(e => System.Diagnostics.Debug.WriteLine(e.Message)) //TODO: log                                 
-                 .IntoAsync(Image);
+                 .IntoAsync(image);
             }
             await GetPOsts(countLoadItems, page * countLoadItems);
         }
@@ -103,7 +102,6 @@ namespace VkPostDownloader
         public override void OnDestroyView()
         {
             base.OnDestroyView();
-            Cheeseknife.Reset(this);
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)

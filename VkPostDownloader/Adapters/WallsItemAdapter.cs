@@ -5,7 +5,6 @@ using System.Linq;
 using Android.App;
 using Android.Views;
 using Android.Widget;
-using Com.Lilarcor.Cheeseknife;
 using Android.Support.V7.Widget;
 using FFImageLoading;
 using VkPostDownloader.Model;
@@ -81,13 +80,12 @@ namespace VkPostDownloader
         }
 
         class WallViewHolder : RecyclerView.ViewHolder
-        {
-            [InjectView(Resource.Id.linLayout_contanerwall)]
+        {           
             public LinearLayout Layout { get; private set; }
 
             public WallViewHolder(View view) : base(view)
             {
-                Cheeseknife.Inject(this, view);
+                Layout = view.FindViewById<LinearLayout>(Resource.Id.linLayout_contanerwall);
             }
         }
     }
