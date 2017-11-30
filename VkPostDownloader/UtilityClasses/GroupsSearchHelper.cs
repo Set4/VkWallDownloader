@@ -36,7 +36,7 @@ namespace VkPostDownloader.UtilityClasses
                         foreach (var item in RemoveCloseGroups(data.response.items))
                         {
                             itemGroup = ConvertHelper.ConvertToGroupItem(item);
-                            itemGroup.IsExist = await DbHelper.CheckIsExist<GroupItem>(itemGroup.Id, connection);
+                            itemGroup.IsExist = await DbHelper.CheckIsExist(itemGroup.Id, connection);
                             items.Add(itemGroup);
                         }
                 }

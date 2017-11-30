@@ -38,9 +38,9 @@ namespace VkPostDownloader.UtilityClasses
             return await connection.InsertAsync(item);
         }
 
-        public static async Task<bool> CheckIsExist<T>(int id, SQLiteAsyncConnection connection) where T : IItemModel, new()
-        {
-            T item = await connection.Table<T>().Where(i => i.Id == id).FirstOrDefaultAsync();
+        public static async Task<bool> CheckIsExist(int id, SQLiteAsyncConnection connection)
+        { 
+            var item = await connection.Table<GroupItem>().Where(i => i.Id == id).FirstOrDefaultAsync();
             return item == null ? false : true;
         }
 
