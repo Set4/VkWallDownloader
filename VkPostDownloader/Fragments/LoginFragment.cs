@@ -6,27 +6,26 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Com.Lilarcor.Cheeseknife;
 using VKontakte;
 
 namespace VkPostDownloader
 {
     public class LoginFragment : Fragment
     {
+        private Button login;
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             var view = inflater.Inflate(Resource.Layout.login_layout, container, false);
-            Cheeseknife.Inject(this, view);
+            login = view.FindViewById<Button>(Resource.Id.sign_in_button);
+            login.Click += OnClickMyButton;
             return view;
         }
 
         public override void OnDestroyView()
         {
             base.OnDestroyView();
-            Cheeseknife.Reset(this);
         }
-
-        [InjectOnClick(Resource.Id.sign_in_button)]
+               
         void OnClickMyButton(object sender, EventArgs e)
         {
             VKSdk.Login(this, MainApplication.MyScopes);

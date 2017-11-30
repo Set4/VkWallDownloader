@@ -10,7 +10,6 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
-using Com.Lilarcor.Cheeseknife;
 using Android.Support.V7.App;
 using Android.Support.Design.Widget;
 using Android.Support.V4.Widget;
@@ -25,15 +24,10 @@ namespace VkPostDownloader
 {
     public class FollowersFragment : Fragment
     {
-        [InjectView(Resource.Id.drawer_layout)]
         DrawerLayout drawerLayout;
-        [InjectView(Resource.Id.nav_view)]
         NavigationView navigationView;
-        [InjectView(Resource.Id.toolbar)]
         Android.Support.V7.Widget.Toolbar toolbar;
-        [InjectView(Resource.Id.recyclerV_followergroups)]
         RecyclerView recyclerView;
-        [InjectView(Resource.Id.prBar_groupsLoacalLoading)]
         ProgressBar progressBar;
 
 
@@ -49,7 +43,12 @@ namespace VkPostDownloader
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             var view = inflater.Inflate(Resource.Layout.followers_layout, null);
-            Cheeseknife.Inject(this, view);
+
+            drawerLayout = view.FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            navigationView = view.FindViewById<NavigationView>(Resource.Id.nav_view);
+            toolbar = view.FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            recyclerView = view.FindViewById<RecyclerView>(Resource.Id.recyclerV_followergroups);
+            progressBar = view.FindViewById<ProgressBar>(Resource.Id.prBar_groupsLoacalLoading);
 
             ((AppCompatActivity)this.Activity).SetSupportActionBar(toolbar);
             var drawerToggle = new ActionBarDrawerToggle(this.Activity, drawerLayout, toolbar, Resource.String.drawer_open, Resource.String.drawer_close);
@@ -80,7 +79,6 @@ namespace VkPostDownloader
         public override void OnDestroyView()
         {
             base.OnDestroyView();
-            Cheeseknife.Reset(this);
         }
 
         private void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
