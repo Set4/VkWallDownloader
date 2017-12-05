@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+      android:id="@+id/bb_menu_recents"    
+      android:title="F" />
+  <!--android:icon="@drawable/ic_recents"-->
+  <item
+      android:id="@+id/bb_menu_favorites"      
+      android:title="S" />
+  <item
+      android:id="@+id/bb_menu_nearby"     
+      android:title="M"/>  
+</menu>
