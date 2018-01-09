@@ -19,8 +19,8 @@ namespace VkPostDownloader.UtilityClasses
                 {
                     connection = new SQLiteAsyncConnection(path);
                     await connection.CreateTableAsync<GroupItem>();
-                    await connection.CreateTableAsync<PostItem>();
                     await connection.CreateTableAsync<ImageItem>();
+                    await connection.CreateTableAsync<PostItem>();
                 }
                 else
                     connection = new SQLiteAsyncConnection(path);
@@ -29,6 +29,10 @@ namespace VkPostDownloader.UtilityClasses
             {
                 //TODO: log error
                 Console.WriteLine("CreateConnection error: " + ex);
+                if (File.Exists(path))
+                    File.Delete(path);
+
+                    throw new Exception("Tables not create", ex);
             }
             return connection;
         }

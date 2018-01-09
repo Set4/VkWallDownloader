@@ -2949,44 +2949,44 @@ namespace VkWallReader
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0a006a
-			public const int abc_background_cache_hint_selector_material_dark = 2131361898;
+			// aapt resource value: 0x7f0a0078
+			public const int abc_background_cache_hint_selector_material_dark = 2131361912;
 			
-			// aapt resource value: 0x7f0a006b
-			public const int abc_background_cache_hint_selector_material_light = 2131361899;
+			// aapt resource value: 0x7f0a0079
+			public const int abc_background_cache_hint_selector_material_light = 2131361913;
 			
-			// aapt resource value: 0x7f0a006c
-			public const int abc_btn_colored_borderless_text_material = 2131361900;
+			// aapt resource value: 0x7f0a007a
+			public const int abc_btn_colored_borderless_text_material = 2131361914;
 			
-			// aapt resource value: 0x7f0a006d
-			public const int abc_btn_colored_text_material = 2131361901;
+			// aapt resource value: 0x7f0a007b
+			public const int abc_btn_colored_text_material = 2131361915;
 			
-			// aapt resource value: 0x7f0a006e
-			public const int abc_color_highlight_material = 2131361902;
+			// aapt resource value: 0x7f0a007c
+			public const int abc_color_highlight_material = 2131361916;
 			
-			// aapt resource value: 0x7f0a006f
-			public const int abc_hint_foreground_material_dark = 2131361903;
+			// aapt resource value: 0x7f0a007d
+			public const int abc_hint_foreground_material_dark = 2131361917;
 			
-			// aapt resource value: 0x7f0a0070
-			public const int abc_hint_foreground_material_light = 2131361904;
+			// aapt resource value: 0x7f0a007e
+			public const int abc_hint_foreground_material_light = 2131361918;
 			
 			// aapt resource value: 0x7f0a0005
 			public const int abc_input_method_navigation_guard = 2131361797;
 			
-			// aapt resource value: 0x7f0a0071
-			public const int abc_primary_text_disable_only_material_dark = 2131361905;
+			// aapt resource value: 0x7f0a007f
+			public const int abc_primary_text_disable_only_material_dark = 2131361919;
 			
-			// aapt resource value: 0x7f0a0072
-			public const int abc_primary_text_disable_only_material_light = 2131361906;
+			// aapt resource value: 0x7f0a0080
+			public const int abc_primary_text_disable_only_material_light = 2131361920;
 			
-			// aapt resource value: 0x7f0a0073
-			public const int abc_primary_text_material_dark = 2131361907;
+			// aapt resource value: 0x7f0a0081
+			public const int abc_primary_text_material_dark = 2131361921;
 			
-			// aapt resource value: 0x7f0a0074
-			public const int abc_primary_text_material_light = 2131361908;
+			// aapt resource value: 0x7f0a0082
+			public const int abc_primary_text_material_light = 2131361922;
 			
-			// aapt resource value: 0x7f0a0075
-			public const int abc_search_url_text = 2131361909;
+			// aapt resource value: 0x7f0a0083
+			public const int abc_search_url_text = 2131361923;
 			
 			// aapt resource value: 0x7f0a0006
 			public const int abc_search_url_text_normal = 2131361798;
@@ -2997,35 +2997,35 @@ namespace VkWallReader
 			// aapt resource value: 0x7f0a0008
 			public const int abc_search_url_text_selected = 2131361800;
 			
-			// aapt resource value: 0x7f0a0076
-			public const int abc_secondary_text_material_dark = 2131361910;
+			// aapt resource value: 0x7f0a0084
+			public const int abc_secondary_text_material_dark = 2131361924;
 			
-			// aapt resource value: 0x7f0a0077
-			public const int abc_secondary_text_material_light = 2131361911;
+			// aapt resource value: 0x7f0a0085
+			public const int abc_secondary_text_material_light = 2131361925;
 			
-			// aapt resource value: 0x7f0a0078
-			public const int abc_tint_btn_checkable = 2131361912;
+			// aapt resource value: 0x7f0a0086
+			public const int abc_tint_btn_checkable = 2131361926;
 			
-			// aapt resource value: 0x7f0a0079
-			public const int abc_tint_default = 2131361913;
+			// aapt resource value: 0x7f0a0087
+			public const int abc_tint_default = 2131361927;
 			
-			// aapt resource value: 0x7f0a007a
-			public const int abc_tint_edittext = 2131361914;
+			// aapt resource value: 0x7f0a0088
+			public const int abc_tint_edittext = 2131361928;
 			
-			// aapt resource value: 0x7f0a007b
-			public const int abc_tint_seek_thumb = 2131361915;
+			// aapt resource value: 0x7f0a0089
+			public const int abc_tint_seek_thumb = 2131361929;
 			
-			// aapt resource value: 0x7f0a007c
-			public const int abc_tint_spinner = 2131361916;
+			// aapt resource value: 0x7f0a008a
+			public const int abc_tint_spinner = 2131361930;
 			
-			// aapt resource value: 0x7f0a007d
-			public const int abc_tint_switch_thumb = 2131361917;
+			// aapt resource value: 0x7f0a008b
+			public const int abc_tint_switch_thumb = 2131361931;
 			
-			// aapt resource value: 0x7f0a007e
-			public const int abc_tint_switch_track = 2131361918;
+			// aapt resource value: 0x7f0a008c
+			public const int abc_tint_switch_track = 2131361932;
 			
-			// aapt resource value: 0x7f0a0064
-			public const int accent = 2131361892;
+			// aapt resource value: 0x7f0a0070
+			public const int accent = 2131361904;
 			
 			// aapt resource value: 0x7f0a0009
 			public const int accent_material_dark = 2131361801;
@@ -3033,8 +3033,11 @@ namespace VkWallReader
 			// aapt resource value: 0x7f0a000a
 			public const int accent_material_light = 2131361802;
 			
-			// aapt resource value: 0x7f0a004a
-			public const int background = 2131361866;
+			// aapt resource value: 0x7f0a0056
+			public const int background = 2131361878;
+			
+			// aapt resource value: 0x7f0a0076
+			public const int backgroundButton = 2131361910;
 			
 			// aapt resource value: 0x7f0a000b
 			public const int background_floating_material_dark = 2131361803;
@@ -3048,20 +3051,20 @@ namespace VkWallReader
 			// aapt resource value: 0x7f0a000e
 			public const int background_material_light = 2131361806;
 			
-			// aapt resource value: 0x7f0a0060
-			public const int bb_darkBackgroundColor = 2131361888;
+			// aapt resource value: 0x7f0a006c
+			public const int bb_darkBackgroundColor = 2131361900;
 			
-			// aapt resource value: 0x7f0a005f
-			public const int bb_darkInActiveBottomBarItemColor = 2131361887;
+			// aapt resource value: 0x7f0a006b
+			public const int bb_darkInActiveBottomBarItemColor = 2131361899;
 			
-			// aapt resource value: 0x7f0a005e
-			public const int bb_inActiveBottomBarItemColor = 2131361886;
+			// aapt resource value: 0x7f0a006a
+			public const int bb_inActiveBottomBarItemColor = 2131361898;
 			
-			// aapt resource value: 0x7f0a0061
-			public const int bb_tabletRightBorderDark = 2131361889;
+			// aapt resource value: 0x7f0a006d
+			public const int bb_tabletRightBorderDark = 2131361901;
 			
-			// aapt resource value: 0x7f0a004b
-			public const int black = 2131361867;
+			// aapt resource value: 0x7f0a0057
+			public const int black = 2131361879;
 			
 			// aapt resource value: 0x7f0a000f
 			public const int bright_foreground_disabled_material_dark = 2131361807;
@@ -3099,17 +3102,17 @@ namespace VkWallReader
 			// aapt resource value: 0x7f0a0003
 			public const int cardview_shadow_start_color = 2131361795;
 			
-			// aapt resource value: 0x7f0a004c
-			public const int clear_btn_color = 2131361868;
+			// aapt resource value: 0x7f0a0058
+			public const int clear_btn_color = 2131361880;
 			
-			// aapt resource value: 0x7f0a004d
-			public const int dark_gray = 2131361869;
+			// aapt resource value: 0x7f0a0059
+			public const int dark_gray = 2131361881;
 			
 			// aapt resource value: 0x7f0a003f
 			public const int design_bottom_navigation_shadow_color = 2131361855;
 			
-			// aapt resource value: 0x7f0a007f
-			public const int design_error = 2131361919;
+			// aapt resource value: 0x7f0a008d
+			public const int design_error = 2131361933;
 			
 			// aapt resource value: 0x7f0a0040
 			public const int design_fab_shadow_end_color = 2131361856;
@@ -3141,8 +3144,8 @@ namespace VkWallReader
 			// aapt resource value: 0x7f0a0049
 			public const int design_textinput_error_color_light = 2131361865;
 			
-			// aapt resource value: 0x7f0a0080
-			public const int design_tint_password_toggle = 2131361920;
+			// aapt resource value: 0x7f0a008e
+			public const int design_tint_password_toggle = 2131361934;
 			
 			// aapt resource value: 0x7f0a0017
 			public const int dim_foreground_disabled_material_dark = 2131361815;
@@ -3156,11 +3159,11 @@ namespace VkWallReader
 			// aapt resource value: 0x7f0a001a
 			public const int dim_foreground_material_light = 2131361818;
 			
-			// aapt resource value: 0x7f0a004e
-			public const int divider = 2131361870;
+			// aapt resource value: 0x7f0a005a
+			public const int divider = 2131361882;
 			
-			// aapt resource value: 0x7f0a004f
-			public const int divider_color = 2131361871;
+			// aapt resource value: 0x7f0a005b
+			public const int divider_color = 2131361883;
 			
 			// aapt resource value: 0x7f0a001b
 			public const int foreground_material_dark = 2131361819;
@@ -3168,8 +3171,8 @@ namespace VkWallReader
 			// aapt resource value: 0x7f0a001c
 			public const int foreground_material_light = 2131361820;
 			
-			// aapt resource value: 0x7f0a0050
-			public const int gray_active_icon = 2131361872;
+			// aapt resource value: 0x7f0a005c
+			public const int gray_active_icon = 2131361884;
 			
 			// aapt resource value: 0x7f0a001d
 			public const int highlighted_text_material_dark = 2131361821;
@@ -3177,17 +3180,17 @@ namespace VkWallReader
 			// aapt resource value: 0x7f0a001e
 			public const int highlighted_text_material_light = 2131361822;
 			
-			// aapt resource value: 0x7f0a0051
-			public const int hint_color = 2131361873;
+			// aapt resource value: 0x7f0a005d
+			public const int hint_color = 2131361885;
 			
-			// aapt resource value: 0x7f0a0052
-			public const int left_action_icon = 2131361874;
+			// aapt resource value: 0x7f0a005e
+			public const int left_action_icon = 2131361886;
 			
-			// aapt resource value: 0x7f0a0053
-			public const int light_gray = 2131361875;
+			// aapt resource value: 0x7f0a005f
+			public const int light_gray = 2131361887;
 			
-			// aapt resource value: 0x7f0a0054
-			public const int light_gray_inactive_icon = 2131361876;
+			// aapt resource value: 0x7f0a0060
+			public const int light_gray_inactive_icon = 2131361888;
 			
 			// aapt resource value: 0x7f0a001f
 			public const int material_blue_grey_800 = 2131361823;
@@ -3225,11 +3228,11 @@ namespace VkWallReader
 			// aapt resource value: 0x7f0a002a
 			public const int material_grey_900 = 2131361834;
 			
-			// aapt resource value: 0x7f0a0055
-			public const int menu_icon_color = 2131361877;
+			// aapt resource value: 0x7f0a0061
+			public const int menu_icon_color = 2131361889;
 			
-			// aapt resource value: 0x7f0a0067
-			public const int nav_header_background = 2131361895;
+			// aapt resource value: 0x7f0a0073
+			public const int nav_header_background = 2131361907;
 			
 			// aapt resource value: 0x7f0a0004
 			public const int notification_action_color_filter = 2131361796;
@@ -3240,23 +3243,23 @@ namespace VkWallReader
 			// aapt resource value: 0x7f0a002c
 			public const int notification_material_background_media_default_color = 2131361836;
 			
-			// aapt resource value: 0x7f0a0056
-			public const int overflow_icon_color = 2131361878;
-			
-			// aapt resource value: 0x7f0a0069
-			public const int pink = 2131361897;
-			
-			// aapt resource value: 0x7f0a0068
-			public const int pink_pressed = 2131361896;
-			
-			// aapt resource value: 0x7f0a0057
-			public const int pressed_color = 2131361879;
-			
 			// aapt resource value: 0x7f0a0062
-			public const int primary = 2131361890;
+			public const int overflow_icon_color = 2131361890;
+			
+			// aapt resource value: 0x7f0a0075
+			public const int pink = 2131361909;
+			
+			// aapt resource value: 0x7f0a0074
+			public const int pink_pressed = 2131361908;
 			
 			// aapt resource value: 0x7f0a0063
-			public const int primaryDark = 2131361891;
+			public const int pressed_color = 2131361891;
+			
+			// aapt resource value: 0x7f0a006e
+			public const int primary = 2131361902;
+			
+			// aapt resource value: 0x7f0a006f
+			public const int primaryDark = 2131361903;
 			
 			// aapt resource value: 0x7f0a002d
 			public const int primary_dark_material_dark = 2131361837;
@@ -3288,8 +3291,8 @@ namespace VkWallReader
 			// aapt resource value: 0x7f0a0036
 			public const int ripple_material_light = 2131361846;
 			
-			// aapt resource value: 0x7f0a0058
-			public const int search_input_background_color = 2131361880;
+			// aapt resource value: 0x7f0a0064
+			public const int search_input_background_color = 2131361892;
 			
 			// aapt resource value: 0x7f0a0037
 			public const int secondary_text_default_material_dark = 2131361847;
@@ -3303,20 +3306,20 @@ namespace VkWallReader
 			// aapt resource value: 0x7f0a003a
 			public const int secondary_text_disabled_material_light = 2131361850;
 			
-			// aapt resource value: 0x7f0a0059
-			public const int semi_transparent = 2131361881;
+			// aapt resource value: 0x7f0a0065
+			public const int semi_transparent = 2131361893;
+			
+			// aapt resource value: 0x7f0a0072
+			public const int splash_background = 2131361906;
 			
 			// aapt resource value: 0x7f0a0066
-			public const int splash_background = 2131361894;
+			public const int suggestion_item_pressed_color = 2131361894;
 			
-			// aapt resource value: 0x7f0a005a
-			public const int suggestion_item_pressed_color = 2131361882;
+			// aapt resource value: 0x7f0a0067
+			public const int suggestion_item_regular_color = 2131361895;
 			
-			// aapt resource value: 0x7f0a005b
-			public const int suggestion_item_regular_color = 2131361883;
-			
-			// aapt resource value: 0x7f0a005c
-			public const int suggestion_list_color = 2131361884;
+			// aapt resource value: 0x7f0a0068
+			public const int suggestion_list_color = 2131361896;
 			
 			// aapt resource value: 0x7f0a003b
 			public const int switch_thumb_disabled_material_dark = 2131361851;
@@ -3324,11 +3327,11 @@ namespace VkWallReader
 			// aapt resource value: 0x7f0a003c
 			public const int switch_thumb_disabled_material_light = 2131361852;
 			
-			// aapt resource value: 0x7f0a0081
-			public const int switch_thumb_material_dark = 2131361921;
+			// aapt resource value: 0x7f0a008f
+			public const int switch_thumb_material_dark = 2131361935;
 			
-			// aapt resource value: 0x7f0a0082
-			public const int switch_thumb_material_light = 2131361922;
+			// aapt resource value: 0x7f0a0090
+			public const int switch_thumb_material_light = 2131361936;
 			
 			// aapt resource value: 0x7f0a003d
 			public const int switch_thumb_normal_material_dark = 2131361853;
@@ -3336,11 +3339,50 @@ namespace VkWallReader
 			// aapt resource value: 0x7f0a003e
 			public const int switch_thumb_normal_material_light = 2131361854;
 			
-			// aapt resource value: 0x7f0a005d
-			public const int transparent = 2131361885;
+			// aapt resource value: 0x7f0a0077
+			public const int textButton = 2131361911;
 			
-			// aapt resource value: 0x7f0a0065
-			public const int window_background = 2131361893;
+			// aapt resource value: 0x7f0a0069
+			public const int transparent = 2131361897;
+			
+			// aapt resource value: 0x7f0a004a
+			public const int vk_black = 2131361866;
+			
+			// aapt resource value: 0x7f0a004b
+			public const int vk_black_pressed = 2131361867;
+			
+			// aapt resource value: 0x7f0a004c
+			public const int vk_clear = 2131361868;
+			
+			// aapt resource value: 0x7f0a004d
+			public const int vk_color = 2131361869;
+			
+			// aapt resource value: 0x7f0a004e
+			public const int vk_grey_color = 2131361870;
+			
+			// aapt resource value: 0x7f0a004f
+			public const int vk_light_color = 2131361871;
+			
+			// aapt resource value: 0x7f0a0050
+			public const int vk_share_blue_color = 2131361872;
+			
+			// aapt resource value: 0x7f0a0051
+			public const int vk_share_gray_line = 2131361873;
+			
+			// aapt resource value: 0x7f0a0052
+			public const int vk_share_link_color = 2131361874;
+			
+			// aapt resource value: 0x7f0a0053
+			public const int vk_share_link_title_color = 2131361875;
+			
+			// aapt resource value: 0x7f0a0054
+			public const int vk_share_top_blue_color = 2131361876;
+			
+			// aapt resource value: 0x7f0a0055
+			public const int vk_white = 2131361877;
+			
+			// aapt resource value: 0x7f0a0071
+			public const int window_background = 2131361905;
 			
 			static Color()
 			{
@@ -3577,17 +3619,17 @@ namespace VkWallReader
 			// aapt resource value: 0x7f07000a
 			public const int abc_text_size_title_material_toolbar = 2131165194;
 			
-			// aapt resource value: 0x7f07009b
-			public const int activity_horizontal_margin = 2131165339;
+			// aapt resource value: 0x7f0700aa
+			public const int activity_horizontal_margin = 2131165354;
 			
-			// aapt resource value: 0x7f07009c
-			public const int activity_vertical_margin = 2131165340;
+			// aapt resource value: 0x7f0700ab
+			public const int activity_vertical_margin = 2131165355;
 			
-			// aapt resource value: 0x7f07009e
-			public const int bb_height = 2131165342;
+			// aapt resource value: 0x7f0700ad
+			public const int bb_height = 2131165357;
 			
-			// aapt resource value: 0x7f07009d
-			public const int bottom_bar_elevation = 2131165341;
+			// aapt resource value: 0x7f0700ac
+			public const int bottom_bar_elevation = 2131165356;
 			
 			// aapt resource value: 0x7f070003
 			public const int cardview_compat_inset_shadow = 2131165187;
@@ -3793,44 +3835,89 @@ namespace VkWallReader
 			// aapt resource value: 0x7f070067
 			public const int notification_top_pad_large_text = 2131165287;
 			
-			// aapt resource value: 0x7f07008e
-			public const int search_bar_filter_section_marin_left = 2131165326;
+			// aapt resource value: 0x7f07009d
+			public const int search_bar_filter_section_marin_left = 2131165341;
+			
+			// aapt resource value: 0x7f07009e
+			public const int search_bar_height = 2131165342;
+			
+			// aapt resource value: 0x7f07009f
+			public const int search_bar_left_icon_left_margin = 2131165343;
+			
+			// aapt resource value: 0x7f0700a0
+			public const int search_bar_right_icon_right_margin = 2131165344;
+			
+			// aapt resource value: 0x7f0700a1
+			public const int search_bar_search_input_left_margin = 2131165345;
+			
+			// aapt resource value: 0x7f0700a2
+			public const int search_bar_search_input_right_margin = 2131165346;
+			
+			// aapt resource value: 0x7f0700a3
+			public const int search_bar_text_size = 2131165347;
+			
+			// aapt resource value: 0x7f0700a4
+			public const int search_view_corner_radius = 2131165348;
+			
+			// aapt resource value: 0x7f0700a5
+			public const int square_button_icon_size = 2131165349;
+			
+			// aapt resource value: 0x7f0700a6
+			public const int square_button_padding = 2131165350;
+			
+			// aapt resource value: 0x7f0700a7
+			public const int square_button_size = 2131165351;
+			
+			// aapt resource value: 0x7f0700a8
+			public const int suggestion_body_text_size = 2131165352;
+			
+			// aapt resource value: 0x7f0700a9
+			public const int text_content_margin = 2131165353;
 			
 			// aapt resource value: 0x7f07008f
-			public const int search_bar_height = 2131165327;
+			public const int vk_share_dialog_padding = 2131165327;
 			
 			// aapt resource value: 0x7f070090
-			public const int search_bar_left_icon_left_margin = 2131165328;
+			public const int vk_share_dialog_padding_top = 2131165328;
+			
+			// aapt resource value: 0x7f07008e
+			public const int vk_share_dialog_view_padding = 2131165326;
 			
 			// aapt resource value: 0x7f070091
-			public const int search_bar_right_icon_right_margin = 2131165329;
+			public const int vk_share_link_top_margin = 2131165329;
 			
 			// aapt resource value: 0x7f070092
-			public const int search_bar_search_input_left_margin = 2131165330;
+			public const int vk_share_send_text_size = 2131165330;
 			
 			// aapt resource value: 0x7f070093
-			public const int search_bar_search_input_right_margin = 2131165331;
+			public const int vk_share_settings_button_min_height = 2131165331;
 			
 			// aapt resource value: 0x7f070094
-			public const int search_bar_text_size = 2131165332;
+			public const int vk_share_title_link_host_size = 2131165332;
 			
 			// aapt resource value: 0x7f070095
-			public const int search_view_corner_radius = 2131165333;
+			public const int vk_share_title_link_title_size = 2131165333;
 			
 			// aapt resource value: 0x7f070096
-			public const int square_button_icon_size = 2131165334;
+			public const int vk_share_title_text_size = 2131165334;
 			
 			// aapt resource value: 0x7f070097
-			public const int square_button_padding = 2131165335;
+			public const int vk_share_top_button_padding_left = 2131165335;
 			
 			// aapt resource value: 0x7f070098
-			public const int square_button_size = 2131165336;
+			public const int vk_share_top_button_padding_right = 2131165336;
 			
 			// aapt resource value: 0x7f070099
-			public const int suggestion_body_text_size = 2131165337;
+			public const int vk_share_top_image_margin = 2131165337;
 			
 			// aapt resource value: 0x7f07009a
-			public const int text_content_margin = 2131165338;
+			public const int vk_share_top_line_margin = 2131165338;
+			
+			// aapt resource value: 0x7f07009b
+			public const int vk_share_top_panel_height = 2131165339;
+			
+			// aapt resource value: 0x7f07009c
+			public const int vk_share_top_title_margin = 2131165340;
 			
 			static Dimension()
 			{
@@ -4097,26 +4184,26 @@ namespace VkWallReader
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f020075
-			public const int avd_hide_password_1 = 2130837621;
+			// aapt resource value: 0x7f02007b
+			public const int avd_hide_password_1 = 2130837627;
 			
-			// aapt resource value: 0x7f020076
-			public const int avd_hide_password_2 = 2130837622;
+			// aapt resource value: 0x7f02007c
+			public const int avd_hide_password_2 = 2130837628;
 			
-			// aapt resource value: 0x7f020077
-			public const int avd_hide_password_3 = 2130837623;
+			// aapt resource value: 0x7f02007d
+			public const int avd_hide_password_3 = 2130837629;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f020078
-			public const int avd_show_password_1 = 2130837624;
+			// aapt resource value: 0x7f02007e
+			public const int avd_show_password_1 = 2130837630;
 			
-			// aapt resource value: 0x7f020079
-			public const int avd_show_password_2 = 2130837625;
+			// aapt resource value: 0x7f02007f
+			public const int avd_show_password_2 = 2130837631;
 			
-			// aapt resource value: 0x7f02007a
-			public const int avd_show_password_3 = 2130837626;
+			// aapt resource value: 0x7f020080
+			public const int avd_show_password_3 = 2130837632;
 			
 			// aapt resource value: 0x7f020055
 			public const int bb_bottom_bar_top_shadow = 2130837589;
@@ -4143,76 +4230,94 @@ namespace VkWallReader
 			public const int divider_background = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int ic_arrow_back_black_24dp = 2130837597;
+			public const int ic_ab_app = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int ic_clear_black_24dp = 2130837598;
+			public const int ic_ab_done = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int ic_history_black_24dp = 2130837599;
+			public const int ic_arrow_back_black_24dp = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int ic_invert_colors_black_24dp = 2130837600;
+			public const int ic_clear_black_24dp = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int ic_mic_black_24dp = 2130837601;
+			public const int ic_history_black_24dp = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int ic_more_vert_black_24dp = 2130837602;
+			public const int ic_invert_colors_black_24dp = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int ic_search_black_24dp = 2130837603;
+			public const int ic_mic_black_24dp = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int navigation_empty_icon = 2130837604;
+			public const int ic_more_vert_black_24dp = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int notification_action_background = 2130837605;
+			public const int ic_search_black_24dp = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int notification_bg = 2130837606;
+			public const int logo_wallreaderpng = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int notification_bg_low = 2130837607;
+			public const int navigation_empty_icon = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int notification_bg_low_normal = 2130837608;
+			public const int notification_action_background = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int notification_bg_low_pressed = 2130837609;
+			public const int notification_bg = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int notification_bg_normal = 2130837610;
+			public const int notification_bg_low = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int notification_bg_normal_pressed = 2130837611;
+			public const int notification_bg_low_normal = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int notification_icon_background = 2130837612;
-			
-			// aapt resource value: 0x7f020073
-			public const int notification_template_icon_bg = 2130837619;
-			
-			// aapt resource value: 0x7f020074
-			public const int notification_template_icon_low_bg = 2130837620;
+			public const int notification_bg_low_pressed = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int notification_tile_bg = 2130837613;
+			public const int notification_bg_normal = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int notify_panel_notification_icon_bg = 2130837614;
+			public const int notification_bg_normal_pressed = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int oval_btn_selector = 2130837615;
+			public const int notification_icon_background = 2130837615;
+			
+			// aapt resource value: 0x7f020079
+			public const int notification_template_icon_bg = 2130837625;
+			
+			// aapt resource value: 0x7f02007a
+			public const int notification_template_icon_low_bg = 2130837626;
 			
 			// aapt resource value: 0x7f020070
-			public const int rect_btn_selector = 2130837616;
+			public const int notification_tile_bg = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int splash_screen = 2130837617;
+			public const int notify_panel_notification_icon_bg = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int suggestion_item_background = 2130837618;
+			public const int oval_btn_selector = 2130837618;
+			
+			// aapt resource value: 0x7f020073
+			public const int rect_btn_selector = 2130837619;
+			
+			// aapt resource value: 0x7f020074
+			public const int splash_screen = 2130837620;
+			
+			// aapt resource value: 0x7f020075
+			public const int suggestion_item_background = 2130837621;
+			
+			// aapt resource value: 0x7f020076
+			public const int vk_clear_shape = 2130837622;
+			
+			// aapt resource value: 0x7f020077
+			public const int vk_gray_transparent_shape = 2130837623;
+			
+			// aapt resource value: 0x7f020078
+			public const int vk_share_send_button_background = 2130837624;
 			
 			static Drawable()
 			{
@@ -4227,8 +4332,8 @@ namespace VkWallReader
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080096
-			public const int action0 = 2131230870;
+			// aapt resource value: 0x7f080097
+			public const int action0 = 2131230871;
 			
 			// aapt resource value: 0x7f080067
 			public const int action_bar = 2131230823;
@@ -4251,17 +4356,17 @@ namespace VkWallReader
 			// aapt resource value: 0x7f080044
 			public const int action_bar_title = 2131230788;
 			
-			// aapt resource value: 0x7f080093
-			public const int action_container = 2131230867;
+			// aapt resource value: 0x7f080094
+			public const int action_container = 2131230868;
 			
 			// aapt resource value: 0x7f080068
 			public const int action_context_bar = 2131230824;
 			
-			// aapt resource value: 0x7f08009a
-			public const int action_divider = 2131230874;
+			// aapt resource value: 0x7f08009b
+			public const int action_divider = 2131230875;
 			
-			// aapt resource value: 0x7f080094
-			public const int action_image = 2131230868;
+			// aapt resource value: 0x7f080095
+			public const int action_image = 2131230869;
 			
 			// aapt resource value: 0x7f080003
 			public const int action_menu_divider = 2131230723;
@@ -4278,17 +4383,17 @@ namespace VkWallReader
 			// aapt resource value: 0x7f080046
 			public const int action_mode_close_button = 2131230790;
 			
-			// aapt resource value: 0x7f080095
-			public const int action_text = 2131230869;
+			// aapt resource value: 0x7f080096
+			public const int action_text = 2131230870;
 			
-			// aapt resource value: 0x7f0800a3
-			public const int actions = 2131230883;
+			// aapt resource value: 0x7f0800a4
+			public const int actions = 2131230884;
 			
 			// aapt resource value: 0x7f080047
 			public const int activity_chooser_view_content = 2131230791;
 			
-			// aapt resource value: 0x7f080091
-			public const int activity_fragment_container = 2131230865;
+			// aapt resource value: 0x7f080092
+			public const int activity_fragment_container = 2131230866;
 			
 			// aapt resource value: 0x7f080019
 			public const int add = 2131230745;
@@ -4301,6 +4406,9 @@ namespace VkWallReader
 			
 			// aapt resource value: 0x7f080023
 			public const int always = 2131230755;
+			
+			// aapt resource value: 0x7f0800c9
+			public const int attachmentLinkLayout = 2131230921;
 			
 			// aapt resource value: 0x7f08002f
 			public const int auto = 2131230767;
@@ -4326,14 +4434,17 @@ namespace VkWallReader
 			// aapt resource value: 0x7f08007f
 			public const int bb_bottom_bar_title = 2131230847;
 			
-			// aapt resource value: 0x7f0800bd
-			public const int bb_menu_favorites = 2131230909;
+			// aapt resource value: 0x7f0800d1
+			public const int bb_menu_favorites = 2131230929;
 			
-			// aapt resource value: 0x7f0800be
-			public const int bb_menu_nearby = 2131230910;
+			// aapt resource value: 0x7f0800cf
+			public const int bb_menu_maim = 2131230927;
 			
-			// aapt resource value: 0x7f0800bc
-			public const int bb_menu_recents = 2131230908;
+			// aapt resource value: 0x7f0800d2
+			public const int bb_menu_nearby = 2131230930;
+			
+			// aapt resource value: 0x7f0800d0
+			public const int bb_menu_recents = 2131230928;
 			
 			// aapt resource value: 0x7f08007d
 			public const int bb_tablet_right_border = 2131230845;
@@ -4344,17 +4455,26 @@ namespace VkWallReader
 			// aapt resource value: 0x7f080020
 			public const int beginning = 2131230752;
 			
-			// aapt resource value: 0x7f0800b6
-			public const int body = 2131230902;
+			// aapt resource value: 0x7f0800b7
+			public const int body = 2131230903;
 			
 			// aapt resource value: 0x7f080028
 			public const int bottom = 2131230760;
 			
+			// aapt resource value: 0x7f080091
+			public const int btn_loginVk = 2131230865;
+			
 			// aapt resource value: 0x7f08004e
 			public const int buttonPanel = 2131230798;
 			
-			// aapt resource value: 0x7f080097
-			public const int cancel_action = 2131230871;
+			// aapt resource value: 0x7f080098
+			public const int cancel_action = 2131230872;
+			
+			// aapt resource value: 0x7f0800be
+			public const int captchaAnswer = 2131230910;
+			
+			// aapt resource value: 0x7f0800bb
+			public const int captcha_container = 2131230907;
 			
 			// aapt resource value: 0x7f080030
 			public const int center = 2131230768;
@@ -4368,11 +4488,11 @@ namespace VkWallReader
 			// aapt resource value: 0x7f08005e
 			public const int checkbox = 2131230814;
 			
-			// aapt resource value: 0x7f08009f
-			public const int chronometer = 2131230879;
+			// aapt resource value: 0x7f0800a0
+			public const int chronometer = 2131230880;
 			
-			// aapt resource value: 0x7f0800b3
-			public const int clear_btn = 2131230899;
+			// aapt resource value: 0x7f0800b4
+			public const int clear_btn = 2131230900;
 			
 			// aapt resource value: 0x7f080039
 			public const int clip_horizontal = 2131230777;
@@ -4385,6 +4505,9 @@ namespace VkWallReader
 			
 			// aapt resource value: 0x7f080051
 			public const int contentPanel = 2131230801;
+			
+			// aapt resource value: 0x7f0800c0
+			public const int copyUrl = 2131230912;
 			
 			// aapt resource value: 0x7f080058
 			public const int custom = 2131230808;
@@ -4425,8 +4548,8 @@ namespace VkWallReader
 			// aapt resource value: 0x7f080021
 			public const int end = 2131230753;
 			
-			// aapt resource value: 0x7f0800a9
-			public const int end_padder = 2131230889;
+			// aapt resource value: 0x7f0800aa
+			public const int end_padder = 2131230890;
 			
 			// aapt resource value: 0x7f08002a
 			public const int enterAlways = 2131230762;
@@ -4455,8 +4578,8 @@ namespace VkWallReader
 			// aapt resource value: 0x7f08003f
 			public const int @fixed = 2131230783;
 			
-			// aapt resource value: 0x7f0800ab
-			public const int floating_search_view = 2131230891;
+			// aapt resource value: 0x7f0800ac
+			public const int floating_search_view = 2131230892;
 			
 			// aapt resource value: 0x7f080005
 			public const int home = 2131230725;
@@ -4467,8 +4590,8 @@ namespace VkWallReader
 			// aapt resource value: 0x7f08004c
 			public const int icon = 2131230796;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int icon_group = 2131230884;
+			// aapt resource value: 0x7f0800a5
+			public const int icon_group = 2131230885;
 			
 			// aapt resource value: 0x7f080025
 			public const int ifRoom = 2131230757;
@@ -4476,8 +4599,17 @@ namespace VkWallReader
 			// aapt resource value: 0x7f080049
 			public const int image = 2131230793;
 			
-			// aapt resource value: 0x7f0800a0
-			public const int info = 2131230880;
+			// aapt resource value: 0x7f0800bd
+			public const int imageView = 2131230909;
+			
+			// aapt resource value: 0x7f0800c8
+			public const int imagesContainer = 2131230920;
+			
+			// aapt resource value: 0x7f0800c7
+			public const int imagesScrollView = 2131230919;
+			
+			// aapt resource value: 0x7f0800a1
+			public const int info = 2131230881;
 			
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
@@ -4488,17 +4620,23 @@ namespace VkWallReader
 			// aapt resource value: 0x7f080034
 			public const int left = 2131230772;
 			
-			// aapt resource value: 0x7f0800af
-			public const int left_action = 2131230895;
+			// aapt resource value: 0x7f0800b0
+			public const int left_action = 2131230896;
 			
-			// aapt resource value: 0x7f0800b5
-			public const int left_icon = 2131230901;
+			// aapt resource value: 0x7f0800b6
+			public const int left_icon = 2131230902;
 			
-			// aapt resource value: 0x7f0800a5
-			public const int line1 = 2131230885;
+			// aapt resource value: 0x7f0800a6
+			public const int line1 = 2131230886;
 			
-			// aapt resource value: 0x7f0800a7
-			public const int line3 = 2131230887;
+			// aapt resource value: 0x7f0800a8
+			public const int line3 = 2131230888;
+			
+			// aapt resource value: 0x7f0800cb
+			public const int linkHost = 2131230923;
+			
+			// aapt resource value: 0x7f0800ca
+			public const int linkTitle = 2131230922;
 			
 			// aapt resource value: 0x7f08000f
 			public const int listMode = 2131230735;
@@ -4506,23 +4644,23 @@ namespace VkWallReader
 			// aapt resource value: 0x7f08004b
 			public const int list_item = 2131230795;
 			
-			// aapt resource value: 0x7f0800bb
-			public const int masked = 2131230907;
+			// aapt resource value: 0x7f0800ce
+			public const int masked = 2131230926;
 			
-			// aapt resource value: 0x7f080099
-			public const int media_actions = 2131230873;
+			// aapt resource value: 0x7f08009a
+			public const int media_actions = 2131230874;
 			
-			// aapt resource value: 0x7f0800bf
-			public const int menu_edit = 2131230911;
+			// aapt resource value: 0x7f0800d3
+			public const int menu_edit = 2131230931;
 			
-			// aapt resource value: 0x7f0800c1
-			public const int menu_preferences = 2131230913;
+			// aapt resource value: 0x7f0800d5
+			public const int menu_preferences = 2131230933;
 			
-			// aapt resource value: 0x7f0800c0
-			public const int menu_save = 2131230912;
+			// aapt resource value: 0x7f0800d4
+			public const int menu_save = 2131230932;
 			
-			// aapt resource value: 0x7f0800b4
-			public const int menu_view = 2131230900;
+			// aapt resource value: 0x7f0800b5
+			public const int menu_view = 2131230901;
 			
 			// aapt resource value: 0x7f080022
 			public const int middle = 2131230754;
@@ -4551,17 +4689,17 @@ namespace VkWallReader
 			// aapt resource value: 0x7f080010
 			public const int normal = 2131230736;
 			
-			// aapt resource value: 0x7f0800a2
-			public const int notification_background = 2131230882;
+			// aapt resource value: 0x7f0800a3
+			public const int notification_background = 2131230883;
+			
+			// aapt resource value: 0x7f08009d
+			public const int notification_main_column = 2131230877;
 			
 			// aapt resource value: 0x7f08009c
-			public const int notification_main_column = 2131230876;
+			public const int notification_main_column_container = 2131230876;
 			
-			// aapt resource value: 0x7f08009b
-			public const int notification_main_column_container = 2131230875;
-			
-			// aapt resource value: 0x7f080092
-			public const int page_container = 2131230866;
+			// aapt resource value: 0x7f080093
+			public const int page_container = 2131230867;
 			
 			// aapt resource value: 0x7f080037
 			public const int parallax = 2131230775;
@@ -4572,8 +4710,20 @@ namespace VkWallReader
 			// aapt resource value: 0x7f080038
 			public const int pin = 2131230776;
 			
+			// aapt resource value: 0x7f0800c5
+			public const int postContentLayout = 2131230917;
+			
+			// aapt resource value: 0x7f0800cc
+			public const int postSettingsLayout = 2131230924;
+			
 			// aapt resource value: 0x7f080090
 			public const int prBar_groupsLoacalLoading = 2131230864;
+			
+			// aapt resource value: 0x7f0800bf
+			public const int progress = 2131230911;
+			
+			// aapt resource value: 0x7f0800bc
+			public const int progressBar = 2131230908;
 			
 			// aapt resource value: 0x7f080006
 			public const int progress_circular = 2131230726;
@@ -4587,17 +4737,17 @@ namespace VkWallReader
 			// aapt resource value: 0x7f08008f
 			public const int recyclerV_followergroups = 2131230863;
 			
-			// aapt resource value: 0x7f0800ac
-			public const int recyclerV_searchgroups = 2131230892;
+			// aapt resource value: 0x7f0800ad
+			public const int recyclerV_searchgroups = 2131230893;
 			
 			// aapt resource value: 0x7f080035
 			public const int right = 2131230773;
 			
-			// aapt resource value: 0x7f0800a1
-			public const int right_icon = 2131230881;
+			// aapt resource value: 0x7f0800a2
+			public const int right_icon = 2131230882;
 			
-			// aapt resource value: 0x7f08009d
-			public const int right_side = 2131230877;
+			// aapt resource value: 0x7f08009e
+			public const int right_side = 2131230878;
 			
 			// aapt resource value: 0x7f08001b
 			public const int screen = 2131230747;
@@ -4623,20 +4773,20 @@ namespace VkWallReader
 			// aapt resource value: 0x7f08006a
 			public const int search_bar = 2131230826;
 			
-			// aapt resource value: 0x7f0800ae
-			public const int search_bar_left_action_container = 2131230894;
+			// aapt resource value: 0x7f0800af
+			public const int search_bar_left_action_container = 2131230895;
 			
 			// aapt resource value: 0x7f080076
 			public const int search_bar_mic_or_ex = 2131230838;
 			
-			// aapt resource value: 0x7f0800aa
-			public const int search_bar_overflow_menu = 2131230890;
+			// aapt resource value: 0x7f0800ab
+			public const int search_bar_overflow_menu = 2131230891;
 			
-			// aapt resource value: 0x7f0800b0
-			public const int search_bar_search_progress = 2131230896;
+			// aapt resource value: 0x7f0800b1
+			public const int search_bar_search_progress = 2131230897;
 			
-			// aapt resource value: 0x7f0800b2
-			public const int search_bar_text = 2131230898;
+			// aapt resource value: 0x7f0800b3
+			public const int search_bar_text = 2131230899;
 			
 			// aapt resource value: 0x7f08006c
 			public const int search_button = 2131230828;
@@ -4650,8 +4800,8 @@ namespace VkWallReader
 			// aapt resource value: 0x7f080073
 			public const int search_go_btn = 2131230835;
 			
-			// aapt resource value: 0x7f0800b1
-			public const int search_input_parent = 2131230897;
+			// aapt resource value: 0x7f0800b2
+			public const int search_input_parent = 2131230898;
 			
 			// aapt resource value: 0x7f08006e
 			public const int search_mag_icon = 2131230830;
@@ -4659,20 +4809,32 @@ namespace VkWallReader
 			// aapt resource value: 0x7f08006f
 			public const int search_plate = 2131230831;
 			
-			// aapt resource value: 0x7f0800ad
-			public const int search_query_section = 2131230893;
+			// aapt resource value: 0x7f0800ae
+			public const int search_query_section = 2131230894;
 			
 			// aapt resource value: 0x7f080070
 			public const int search_src_text = 2131230832;
 			
-			// aapt resource value: 0x7f0800b7
-			public const int search_suggestions_section = 2131230903;
+			// aapt resource value: 0x7f0800b8
+			public const int search_suggestions_section = 2131230904;
 			
 			// aapt resource value: 0x7f080074
 			public const int search_voice_btn = 2131230836;
 			
 			// aapt resource value: 0x7f080075
 			public const int select_dialog_listview = 2131230837;
+			
+			// aapt resource value: 0x7f0800c4
+			public const int sendButton = 2131230916;
+			
+			// aapt resource value: 0x7f0800c2
+			public const int sendButtonLayout = 2131230914;
+			
+			// aapt resource value: 0x7f0800c3
+			public const int sendProgress = 2131230915;
+			
+			// aapt resource value: 0x7f0800c6
+			public const int shareText = 2131230918;
 			
 			// aapt resource value: 0x7f08005f
 			public const int shortcut = 2131230815;
@@ -4722,8 +4884,8 @@ namespace VkWallReader
 			// aapt resource value: 0x7f080036
 			public const int start = 2131230774;
 			
-			// aapt resource value: 0x7f080098
-			public const int status_bar_latest_event_content = 2131230872;
+			// aapt resource value: 0x7f080099
+			public const int status_bar_latest_event_content = 2131230873;
 			
 			// aapt resource value: 0x7f080061
 			public const int submenuarrow = 2131230817;
@@ -4731,20 +4893,20 @@ namespace VkWallReader
 			// aapt resource value: 0x7f080072
 			public const int submit_area = 2131230834;
 			
-			// aapt resource value: 0x7f0800b9
-			public const int suggestions_list = 2131230905;
+			// aapt resource value: 0x7f0800ba
+			public const int suggestions_list = 2131230906;
 			
-			// aapt resource value: 0x7f0800b8
-			public const int suggestions_list_container = 2131230904;
+			// aapt resource value: 0x7f0800b9
+			public const int suggestions_list_container = 2131230905;
 			
 			// aapt resource value: 0x7f080011
 			public const int tabMode = 2131230737;
 			
-			// aapt resource value: 0x7f0800a8
-			public const int text = 2131230888;
+			// aapt resource value: 0x7f0800a9
+			public const int text = 2131230889;
 			
-			// aapt resource value: 0x7f0800a6
-			public const int text2 = 2131230886;
+			// aapt resource value: 0x7f0800a7
+			public const int text2 = 2131230887;
 			
 			// aapt resource value: 0x7f080055
 			public const int textSpacerNoButtons = 2131230805;
@@ -4761,8 +4923,8 @@ namespace VkWallReader
 			// aapt resource value: 0x7f08000d
 			public const int textinput_error = 2131230733;
 			
-			// aapt resource value: 0x7f08009e
-			public const int time = 2131230878;
+			// aapt resource value: 0x7f08009f
+			public const int time = 2131230879;
 			
 			// aapt resource value: 0x7f08004d
 			public const int title = 2131230797;
@@ -4778,6 +4940,9 @@ namespace VkWallReader
 			
 			// aapt resource value: 0x7f080029
 			public const int top = 2131230761;
+			
+			// aapt resource value: 0x7f0800c1
+			public const int topBarLayout = 2131230913;
 			
 			// aapt resource value: 0x7f080059
 			public const int topPanel = 2131230809;
@@ -4800,8 +4965,8 @@ namespace VkWallReader
 			// aapt resource value: 0x7f08000e
 			public const int view_offset_helper = 2131230734;
 			
-			// aapt resource value: 0x7f0800ba
-			public const int visible = 2131230906;
+			// aapt resource value: 0x7f0800cd
+			public const int visible = 2131230925;
 			
 			// aapt resource value: 0x7f080027
 			public const int withText = 2131230759;
@@ -5010,82 +5175,94 @@ namespace VkWallReader
 			public const int followers_layout = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public const int Main = 2130903089;
+			public const int logIn_layout = 2130903089;
 			
 			// aapt resource value: 0x7f030032
-			public const int main_layout = 2130903090;
+			public const int Main = 2130903090;
 			
 			// aapt resource value: 0x7f030033
-			public const int notification_action = 2130903091;
+			public const int main_layout = 2130903091;
 			
 			// aapt resource value: 0x7f030034
-			public const int notification_action_tombstone = 2130903092;
+			public const int notification_action = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int notification_media_action = 2130903093;
+			public const int notification_action_tombstone = 2130903093;
 			
 			// aapt resource value: 0x7f030036
-			public const int notification_media_cancel_action = 2130903094;
+			public const int notification_media_action = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int notification_template_big_media = 2130903095;
+			public const int notification_media_cancel_action = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int notification_template_big_media_custom = 2130903096;
+			public const int notification_template_big_media = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public const int notification_template_big_media_narrow = 2130903097;
+			public const int notification_template_big_media_custom = 2130903097;
 			
 			// aapt resource value: 0x7f03003a
-			public const int notification_template_big_media_narrow_custom = 2130903098;
+			public const int notification_template_big_media_narrow = 2130903098;
 			
 			// aapt resource value: 0x7f03003b
-			public const int notification_template_custom_big = 2130903099;
+			public const int notification_template_big_media_narrow_custom = 2130903099;
 			
 			// aapt resource value: 0x7f03003c
-			public const int notification_template_icon_group = 2130903100;
+			public const int notification_template_custom_big = 2130903100;
 			
 			// aapt resource value: 0x7f03003d
-			public const int notification_template_lines_media = 2130903101;
+			public const int notification_template_icon_group = 2130903101;
 			
 			// aapt resource value: 0x7f03003e
-			public const int notification_template_media = 2130903102;
+			public const int notification_template_lines_media = 2130903102;
 			
 			// aapt resource value: 0x7f03003f
-			public const int notification_template_media_custom = 2130903103;
+			public const int notification_template_media = 2130903103;
 			
 			// aapt resource value: 0x7f030040
-			public const int notification_template_part_chronometer = 2130903104;
+			public const int notification_template_media_custom = 2130903104;
 			
 			// aapt resource value: 0x7f030041
-			public const int notification_template_part_time = 2130903105;
+			public const int notification_template_part_chronometer = 2130903105;
 			
 			// aapt resource value: 0x7f030042
-			public const int overflow_action_item_layout = 2130903106;
+			public const int notification_template_part_time = 2130903106;
 			
 			// aapt resource value: 0x7f030043
-			public const int search_layout = 2130903107;
+			public const int overflow_action_item_layout = 2130903107;
 			
 			// aapt resource value: 0x7f030044
-			public const int search_query_section = 2130903108;
+			public const int search_layout = 2130903108;
 			
 			// aapt resource value: 0x7f030045
-			public const int search_suggestion_item = 2130903109;
+			public const int search_query_section = 2130903109;
 			
 			// aapt resource value: 0x7f030046
-			public const int search_suggestions_section = 2130903110;
+			public const int search_suggestion_item = 2130903110;
 			
 			// aapt resource value: 0x7f030047
-			public const int select_dialog_item_material = 2130903111;
+			public const int search_suggestions_section = 2130903111;
 			
 			// aapt resource value: 0x7f030048
-			public const int select_dialog_multichoice_material = 2130903112;
+			public const int select_dialog_item_material = 2130903112;
 			
 			// aapt resource value: 0x7f030049
-			public const int select_dialog_singlechoice_material = 2130903113;
+			public const int select_dialog_multichoice_material = 2130903113;
 			
 			// aapt resource value: 0x7f03004a
-			public const int support_simple_spinner_dropdown_item = 2130903114;
+			public const int select_dialog_singlechoice_material = 2130903114;
+			
+			// aapt resource value: 0x7f03004b
+			public const int support_simple_spinner_dropdown_item = 2130903115;
+			
+			// aapt resource value: 0x7f03004c
+			public const int vk_captcha_dialog = 2130903116;
+			
+			// aapt resource value: 0x7f03004d
+			public const int vk_open_auth_dialog = 2130903117;
+			
+			// aapt resource value: 0x7f03004e
+			public const int vk_share_dialog = 2130903118;
 			
 			static Layout()
 			{
@@ -5224,8 +5401,17 @@ namespace VkWallReader
 			// aapt resource value: 0x7f060023
 			public const int bottom_sheet_behavior = 2131099683;
 			
+			// aapt resource value: 0x7f060031
+			public const int btn_login = 2131099697;
+			
 			// aapt resource value: 0x7f060024
 			public const int character_counter_pattern = 2131099684;
+			
+			// aapt resource value: 0x7f060032
+			public const int info_login = 2131099698;
+			
+			// aapt resource value: 0x7f060033
+			public const int message_missed_access_token = 2131099699;
 			
 			// aapt resource value: 0x7f060025
 			public const int password_toggle_content_description = 2131099685;
@@ -5247,6 +5433,27 @@ namespace VkWallReader
 			
 			// aapt resource value: 0x7f060015
 			public const int status_bar_notification_info_overflow = 2131099669;
+			
+			// aapt resource value: 0x7f06002a
+			public const int vk_enter_captcha_text = 2131099690;
+			
+			// aapt resource value: 0x7f06002b
+			public const int vk_name = 2131099691;
+			
+			// aapt resource value: 0x7f06002c
+			public const int vk_new_message_text = 2131099692;
+			
+			// aapt resource value: 0x7f06002d
+			public const int vk_new_post_settings = 2131099693;
+			
+			// aapt resource value: 0x7f06002e
+			public const int vk_retry = 2131099694;
+			
+			// aapt resource value: 0x7f06002f
+			public const int vk_send = 2131099695;
+			
+			// aapt resource value: 0x7f060030
+			public const int vk_share = 2131099696;
 			
 			static String()
 			{
@@ -5276,29 +5483,29 @@ namespace VkWallReader
 			// aapt resource value: 0x7f090165
 			public const int Animation_Design_BottomSheetDialog = 2131296613;
 			
-			// aapt resource value: 0x7f090185
-			public const int BB_BottomBarBadge_Text = 2131296645;
-			
-			// aapt resource value: 0x7f09017e
-			public const int BB_BottomBarItem = 2131296638;
-			
-			// aapt resource value: 0x7f09017f
-			public const int BB_BottomBarItem_Fixed = 2131296639;
-			
-			// aapt resource value: 0x7f090181
-			public const int BB_BottomBarItem_Fixed_TitleAppearance = 2131296641;
-			
-			// aapt resource value: 0x7f090182
-			public const int BB_BottomBarItem_Shifting = 2131296642;
-			
-			// aapt resource value: 0x7f090183
-			public const int BB_BottomBarItem_Shifting_TitleAppearance = 2131296643;
-			
-			// aapt resource value: 0x7f090184
-			public const int BB_BottomBarItem_Tablet = 2131296644;
+			// aapt resource value: 0x7f090187
+			public const int BB_BottomBarBadge_Text = 2131296647;
 			
 			// aapt resource value: 0x7f090180
-			public const int BB_BottomBarItem_TitleStyle = 2131296640;
+			public const int BB_BottomBarItem = 2131296640;
+			
+			// aapt resource value: 0x7f090181
+			public const int BB_BottomBarItem_Fixed = 2131296641;
+			
+			// aapt resource value: 0x7f090183
+			public const int BB_BottomBarItem_Fixed_TitleAppearance = 2131296643;
+			
+			// aapt resource value: 0x7f090184
+			public const int BB_BottomBarItem_Shifting = 2131296644;
+			
+			// aapt resource value: 0x7f090185
+			public const int BB_BottomBarItem_Shifting_TitleAppearance = 2131296645;
+			
+			// aapt resource value: 0x7f090186
+			public const int BB_BottomBarItem_Tablet = 2131296646;
+			
+			// aapt resource value: 0x7f090182
+			public const int BB_BottomBarItem_TitleStyle = 2131296642;
 			
 			// aapt resource value: 0x7f0900a7
 			public const int Base_AlertDialog_AppCompat = 2131296423;
@@ -5774,11 +5981,11 @@ namespace VkWallReader
 			// aapt resource value: 0x7f090003
 			public const int CardView_Light = 2131296259;
 			
-			// aapt resource value: 0x7f090186
-			public const int MyTheme_Base = 2131296646;
+			// aapt resource value: 0x7f090188
+			public const int MyTheme_Base = 2131296648;
 			
-			// aapt resource value: 0x7f090187
-			public const int MyTheme_Splash = 2131296647;
+			// aapt resource value: 0x7f090189
+			public const int MyTheme_Splash = 2131296649;
 			
 			// aapt resource value: 0x7f090022
 			public const int Platform_AppCompat = 2131296290;
@@ -6181,6 +6388,12 @@ namespace VkWallReader
 			
 			// aapt resource value: 0x7f09011a
 			public const int ThemeOverlay_AppCompat_Light = 2131296538;
+			
+			// aapt resource value: 0x7f09017e
+			public const int VK_Transparent = 2131296638;
+			
+			// aapt resource value: 0x7f09017f
+			public const int VKAlertDialog = 2131296639;
 			
 			// aapt resource value: 0x7f09011b
 			public const int Widget_AppCompat_ActionBar = 2131296539;

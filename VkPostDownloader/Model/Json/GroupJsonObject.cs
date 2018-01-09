@@ -24,4 +24,9 @@
         public string photo_100 { get; set; }
         public string photo_200 { get; set; }
     }
+
+    public class SearchGroupResponse
+    {
+        public GroupJsonModel[] response { get; set; }
+    }
 }

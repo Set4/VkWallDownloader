@@ -16,6 +16,29 @@ namespace VkPostDownloader.UtilityClasses
 {
     static class GroupsSearchHelper
     {
+
+        public static Task<GroupItem> GetGroupItemById(int id)
+        {
+            return Task.Run(async () =>
+            {
+                GroupItem item=null;
+                try
+                {
+                    var request = VKApi.Groups.GetById(VKParameters.From(VKApiConst.GroupId, id));
+                   
+                    var response = await request.ExecuteAsync();
+                    var data = JsonConvert.DeserializeObject<Model.Json.Group.SearchGroupResponse>(response.Json.ToString());                   
+                    item = ConvertHelper.ConvertToGroupItem(data.response.First());
+                }
+                catch (Exception ex)
+                {
+                    //ToDO: log
+                }
+
+                return item;
+            });
+        }
+
         public static Task<List<GroupItem>> GetSearchResult(string query, int count, int offset, SQLiteAsyncConnection connection)
         {
             return Task.Run(async () =>
@@ -53,65 +76,72 @@ namespace VkPostDownloader.UtilityClasses
         {
             await Task.Run(async () =>
             {
-                int groupItemKey = await DbHelper.Insert<GroupItem>(item, connection);
-
-                await ImageService.Instance.LoadUrl(item.Photo)
-               .Success((imageInfo, result) =>
-               {
-                   item.PhotoPath = imageInfo.FilePath;
-               })
-               .Retry(2, 200)
-               .Error((ex) => System.Diagnostics.Debug.WriteLine(ex.Message)) //TODO: log        
-               .DownloadOnlyAsync();
-
-                //load posts
-                int countWall = 0;
-                int countLoadetWall = 0;
-                do
+                try
                 {
-                    var request = VKApi.Wall.Get(VKParameters.From(VKApiConst.Q, "-" + item.Id, VKApiConst.AccessToken, VKSdk.AccessToken, VKApiConst.Count, 100, VKApiConst.Offset, countLoadetWall));
+                    int groupItemKey = await DbHelper.Insert<GroupItem>(item, connection);
 
-                    var response = await request.ExecuteAsync();
-                    var data = JsonConvert.DeserializeObject<Model.Json.Wall.Rootobject>(response.Json.ToString());
+                    await ImageService.Instance.LoadUrl(item.Photo)
+                   .Success((imageInfo, result) =>
+                   {
+                       item.PhotoPath = imageInfo.FilePath;
+                   })
+                   .Retry(2, 200)
+                   .Error((ex) => System.Diagnostics.Debug.WriteLine(ex.Message)) //TODO: log        
+                   .DownloadOnlyAsync();
 
-                    countWall = data.response.count;
-
-                    foreach (var i in data.response.items)
+                    //load posts
+                    int countWall = 0;
+                    int countLoadetWall = 0;
+                    do
                     {
-                        PostItem wall = new PostItem()
-                        {
-                            Id = i.id,
-                            GroupItemKey = groupItemKey,
-                            Text = i.text
-                        };
+                        var request = VKApi.Wall.Get(VKParameters.From(VKApiConst.OwnerId, "-" + item.Id, VKApiConst.AccessToken, VKSdk.AccessToken, VKApiConst.Count, 100, VKApiConst.Offset, countLoadetWall));
 
-                        int postItemKey = await DbHelper.Insert<PostItem>(wall, connection);
+                        var response = await request.ExecuteAsync();
+                        var data = JsonConvert.DeserializeObject<Model.Json.Wall.Rootobject>(response.Json.ToString());
 
-                        foreach (var image in i.attachments.Where(att => att.type == "photo"))
+                        countWall = data.response.count;
+
+                        foreach (var i in data.response.items)
                         {
-                            if (image.photo != null)
+                            PostItem wall = new PostItem()
                             {
-                                await ImageService.Instance.LoadUrl(item.Photo)
-                               .Success((imageInfo, result) =>
-                               {
-                                   var imageItem = new ImageItem()
+                                Id = i.id,
+                                GroupItemKey = groupItemKey,
+                                Text = i.text
+                            };
+
+                            int postItemKey = await DbHelper.Insert<PostItem>(wall, connection);
+
+                            foreach (var image in i.attachments.Where(att => att.type == "photo"))
+                            {
+                                if (image.photo != null)
+                                {
+                                    await ImageService.Instance.LoadUrl(item.Photo)
+                                   .Success((imageInfo, result) =>
                                    {
-                                       Id = image.photo.id,
-                                       PostItemKey = postItemKey,
-                                       ImagePath = imageInfo.FilePath
-                                   };
+                                       var imageItem = new ImageItem()
+                                       {
+                                           Id = image.photo.id,
+                                           PostItemKey = postItemKey,
+                                           ImagePath = imageInfo.FilePath
+                                       };
 
-                               })
-                               .Retry(2, 200)
-                               .Error((ex) => System.Diagnostics.Debug.WriteLine(ex.Message)) //TODO: log        
-                               .DownloadOnlyAsync();
+                                   })
+                                   .Retry(2, 200)
+                                   .Error((ex) => System.Diagnostics.Debug.WriteLine(ex.Message)) //TODO: log        
+                                   .DownloadOnlyAsync();
+                                }
                             }
-                        }
 
-                        countLoadetWall++;
+                            countLoadetWall++;
+                        }
                     }
+                    while (countWall > countLoadetWall);
                 }
-                while (countWall > countLoadetWall);
+                catch(Exception ex)
+                {
+                    //TODO: log
+                }
             });
 
             return;

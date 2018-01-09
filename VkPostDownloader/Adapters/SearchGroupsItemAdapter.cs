@@ -75,7 +75,9 @@ namespace VkPostDownloader
                     try
                     {
                         //load 
-                        await GroupsSearchHelper.SaveNewItem(items[position], ((MainActivity)_activity).Connection);
+                        _activity.StartService(new Android.Content.Intent(_activity.BaseContext, typeof(GroupWallDownlodaderIntentService)).PutExtra("id", items[position].Id));
+
+                      // await GroupsSearchHelper.SaveNewItem(items[position], ((MainActivity)_activity).Connection);
                     }
                     catch (Exception ex)
                     {

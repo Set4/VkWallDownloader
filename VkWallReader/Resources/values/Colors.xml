@@ -9,4 +9,9 @@
   <color name="nav_header_background">#0099ff</color>
   <color name="pink_pressed">#0099ff</color>
   <color name="pink">#0099ff</color>
+  <!--main-->
+  <color name="background">#FFFFFF</color>
+  <color name="backgroundButton">#518168</color>
+  <color name="textButton">#FFFFFF</color>
+
 </resources>

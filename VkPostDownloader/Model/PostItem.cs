@@ -12,6 +12,7 @@ namespace VkPostDownloader.Model
         public int GroupItemKey { get; set; }
 
         public string Text { get; set; }
+        [Ignore]
         public List<ImageItem> Image { get; set; } = new List<ImageItem>();
     }
 }
